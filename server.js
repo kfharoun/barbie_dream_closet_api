@@ -1,6 +1,8 @@
 const express = require('express')
 const db = require('./DB')
 const barbieController = require('./Controllers/barbieController')
+const accessoryController = require('./Controllers/accessoryController')
+const outfitController = require('./Controllers/outfitController')
 const bodyParser = require('body-parser')
 const logger = require('morgan')
 const cors = require('cors')
@@ -24,15 +26,25 @@ app.get('/', (req, res) => {
 
 // get info
 app.get('/barbie', barbieController.getAllBarbies)
+app.get('/accessory', accessoryController.getAllAccessories)
+app.get(`/outfit`, outfitController.getAllOutfits)
 
 // get infoByID
 app.get('/barbie/:id', barbieController.getBarbieById)
+app.get('/accessory/:id', accessoryController.getAccessoryById)
+app.get(`/outfit/:id`, outfitController.getOutfitById)
 
 // delete 
 app.delete(`/barbie/:id`, barbieController.deleteBarbie)
+app.delete(`/accessory/:id`, accessoryController.deleteAccessory)
+app.delete(`/outfit/:id`, outfitController.deleteOutfit)
 
 // update 
 app.put(`/barbie/:id`, barbieController.updateBarbie)
+app.put(`/accessory/:id`, accessoryController.updateAccessory)
+app.put(`/outfit/:id`, outfitController.updateOutfit)
 
 // create 
 app.post(`/barbie`, barbieController.createBarbie)
+app.post(`/accessory`, accessoryController.createAccessory)
+app.post(`/outfit`, outfitController.createOutfit)

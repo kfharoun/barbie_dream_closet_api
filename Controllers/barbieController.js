@@ -1,5 +1,4 @@
-const { Barbie } = require('../Models');
-const mongoose = require('mongoose');
+const { Barbie } = require('../Models')
 
 
 
