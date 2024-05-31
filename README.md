@@ -3,6 +3,9 @@
 ![barbieERD](https://i.imgur.com/BvYY56Y.png)
 > One barbie doll can have multiple outfits.
 
+
+![wireframing](https://i.imgur.com/CpaSSA6.png)
+> Wireframe
 ## User Stories:
 
 As a Barbie enthusiast, I want to be able to browse, manage, and customize my virtual Barbie doll collection, including their outfits and accessories, so that I can curate and showcase my unique Barbie style.
@@ -41,3 +44,7 @@ As a Barbie enthusiast, I want to be able to browse, manage, and customize my vi
 ### Thursday 
 
 * tie up loose ends 
+
+
+# Questions 
+* since i want the function of deleting and adding clothes and accessories to certain barbies, should i not make barbie the parent?
