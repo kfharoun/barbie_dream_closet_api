@@ -1,0 +1,15 @@
+{
+  "name": "barbie_dream_closet_api",
+  "version": "1.0.0",
+  "description": "![barbieERD](https://i.imgur.com/BvYY56Y.png) > One barbie doll can have multiple outfits.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^8.4.0"
+  }
+}
