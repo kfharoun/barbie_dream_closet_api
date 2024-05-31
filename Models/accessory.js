@@ -1,6 +1,6 @@
 const { Schema } = require('mongoose')
 
-const OutfitSchema = new Schema(
+const AccessorySchema = new Schema(
   {
     name: { type: String, required: true },
     type: { type: Number, required: true },
@@ -12,4 +12,4 @@ const OutfitSchema = new Schema(
   { timestamps: true }
 )
 
-module.exports = OutfitSchema;
+module.exports = AccessorySchema;
