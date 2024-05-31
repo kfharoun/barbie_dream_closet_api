@@ -6,7 +6,6 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 const resetCollections = async () => {
     try {
         await Accessory.deleteMany({})
-        await Barbie.deleteMany({})
         console.log('All collection reset')
     } catch (error) {
         console.error('Error resetting collections:', error)
@@ -16,7 +15,7 @@ const resetCollections = async () => {
 
 
 const main = async () => {
-    await (resetCollections) 
+    await resetCollections()
   const malibu = await Barbie.find({ name: "Malibu Barbie" })
   const dreamDate = await Barbie.find({ name: "Dream Date Barbie" })
   const totallyHair = await Barbie.find({ name: "Totally Hair 25th Anniversary" })
@@ -24,8 +23,9 @@ const main = async () => {
   const rapunzel = await Barbie.find({ name: "Barbie as Rapunzel" })
   const fashionistaSweetie = await Barbie.find({ name: "Fashionista Sweetie Barbie" })
   
-
+ 
   const accessories = [
+    
     // malibu barbie
     {
         name: "Malibu Barbie Sunglasses",
