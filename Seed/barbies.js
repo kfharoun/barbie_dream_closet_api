@@ -7,10 +7,10 @@ const main = async () => {
     const barbies =
   [
     {
-        name: "Ponytail Barbie" ,
-        releaseYear: 1960, 
-        description: "Barbie® doll got a softer look in 1960. Arched eyebrows changed to curved. Pupils became blue, accented with either blue or brown eyeliner. Dolls came in either blonde or brunette. Gorgeous red lips, painted red nails, and blush added to her beauty. Accessories included gold hoop or pearl stud earrings, black open toe shoes, and white sunglasses with blue lenses. Barbie® #4 was the first doll that came with tan vinyl. Available as both a blonde and brunette with a hard curl on the end of their ponytail, some dolls had factory braided hair. The doll featured blue eyes, brown brows, and red lips. Barbie® #5 came in three hair colors—blond, brunette, or titian. #5 had subtler face paint, a tan-hued vinyl, and optional white sunglasses. This was the first year of the hollow body—marked Barbie®—with a small neck knob.", 
-        image: "./images/ponytailBarbie.png"
+        name: "Malibu Barbie" ,
+        releaseYear: 2008, 
+        description: "One highly sought-after Barbie® doll is Malibu Barbie® doll, which debuted in 1971. This doll solidified Barbie® doll's image as the quintessential sun-loving, California girl. This 50th anniversary version models a reproduction of the famed aqua blue bathing suit, completed with yellow towel and sunglasses. ", 
+        image: "./images/malibu.png"
       },
       {
         name: "Dream Date Barbie" ,
@@ -37,11 +37,12 @@ const main = async () => {
         image: "./images/rapunzel.png"
       },
       {
-        name: "Fashionista Barbie" ,
+        name: "Fashionista Sweetie Barbie" ,
         releaseYear: 2010, 
         description: "Fashionista Barbie #13 reflected the diversity and inclusivity of the modern world when she debuted in 2010. With her diverse range of skin tones, body types, and hairstyles, she celebrated individuality and personal style. This Barbie came with an array of trendy fashion outfits and accessories, allowing for endless mix-and-match possibilities. Fashionista Barbie empowered girls to express themselves and embrace their unique identities.", 
         image: "./images/fashionista.png"
       }
+      
   ]
   await Barbie.insertMany(barbies)
   console.log(`created barbies!`)
