@@ -30,6 +30,7 @@ const main = async () => {
     {
         name: "Malibu Barbie Sunglasses",
         type: "Glasses",
+        color: "Blue",
         image: "./images/malibuGlasses.png",
         barbieID: malibu._id
     },
@@ -43,7 +44,7 @@ const main = async () => {
     {
         name: "Malibu Barbie Book",
         type: "Hand",
-        color: "Pink"
+        color: "Pink",
         image: "./images/malibuBook.png",
         barbieID: malibu._id
     },
@@ -216,93 +217,110 @@ const main = async () => {
     // barbie as rapunzel
     {
         name: "Barbie as Rapunzel Tiara",
-        type: "Hat",
+        type: "Hair",
         color: "Gold",
-        description: "A gold tiara adorned with intricate designs, fit for Barbie as Rapunzel Doll's royal attire. This tiara adds a touch of regal elegance to Barbie's look, complementing her long, flowing hair.",
-        image: "Image link here",
+        image: "./images/rapunzelCrown.png",
         barbieID: rapunzel._id
     },
     {
-        name: "Barbie as Rapunzel Brush",
+        name: "Barbie as Rapunzel Musical Brush",
         type: "Hair",
-        color: "Assorted",
-        description: "An assorted brush accessory that Barbie as Rapunzel Doll can use to groom and style her long, flowing hair. This brush helps Barbie maintain her enchanting appearance, keeping her hair smooth and tangle-free.",
-        image: "Image link here",
+        color: "Pink",
+        image: "./images/rapunzelCrown.png",
         barbieID: rapunzel._id
     },
     {
-        name: "Barbie as Rapunzel Necklace",
-        type: "Necklace",
-        color: "Silver",
-        description: "A silver necklace adorned with a pendant, designed to accessorize Barbie as Rapunzel Doll's royal attire. This necklace adds a touch of sparkle and glamour to Barbie's look, complementing her elegant ensemble.",
-        image: "Image link here",
-        barbieID: rapunzel._id
-    },
-    {
-        name: "Barbie as Rapunzel Hair Extensions",
-        type: "Hair",
-        color: "Assorted",
-        description: "Assorted hair extensions that Barbie as Rapunzel Doll can use to enhance her long, flowing hair. These extensions add volume and length to Barbie's hair, allowing her to create enchanting hairstyles.",
-        image: "Image link here",
-        barbieID: rapunzel._id
-    },
-    {
-        name: "Barbie as Rapunzel Cape",
-        type: "Clothing",
-        color: "Assorted",
-        description: "A regal cape designed to keep Barbie as Rapunzel warm and stylish during her fairy tale adventures, adding an extra layer of enchantment to her ensemble.",
-        image: "Image link here",
-        barbieID: rapunzel._id
-    },
-    {
-        name: "Barbie as Rapunzel Shoes",
+        name: "Barbie as Rapunzel Ballet Slippers",
         type: "Shoes",
-        color: "Assorted",
-        description: "Enchanting shoes designed to complement Barbie as Rapunzel's royal attire, ensuring she walks with grace and elegance as she embarks on her fairy tale journey.",
-        image: "Image link here",
+        color: "Pink",
+        image: "./images/rapunzelShoes.png",
+        barbieID: rapunzel._id
+    },
+    {
+        name: "Barbie as Rapunzel Ballet Slippers",
+        type: "Shoes",
+        color: "Purple",
+        image: "./images/rapunzelShoesPurple.png",
+        barbieID: rapunzel._id
+    },
+    {
+        name: "Barbie as Rapunzel Heals",
+        type: "Shoes",
+        color: "Pink",
+        image: "./images/rapunzelHeals.png",
+        barbieID: rapunzel._id
+    },
+    {
+        name: "Barbie as Rapunzel Mask",
+        type: "Hand",
+        color: "Gold",
+        image: "./images/rapunzelMask.png",
         barbieID: rapunzel._id
     },
     // fashionista sweetie
     {
         name: "Fashionistas Sweetie Purse",
-        type: "Bag",
-        color: "Assorted",
-        description: "An assorted purse accessory that complements Fashionistas Sweetie Doll's chic style. This purse adds a touch of flair to Sweetie's ensemble while allowing her to carry her essentials in style.",
-        image: "Image link here",
+        type: "Hand",
+        color: "Pink",
+        image: "./images/sweetiePurse.png",
         barbieID: fashionistaSweetie._id
     },
     {
-        name: "Fashionistas Sweetie Sunglasses",
-        type: "Glasses",
-        color: "Assorted",
-        description: "A pair of assorted sunglasses that adds a trendy touch to Fashionistas Sweetie Doll's look. These sunglasses shield Sweetie's eyes from the sun while adding a cool and stylish flair to her ensemble.",
-        image: "Image link here",
+        name: "Fashionistas Sweetie Heart Purse",
+        type: "Hand",
+        color: "Pink",
+        image: "./images/sweetieHeart.png",
         barbieID: fashionistaSweetie._id
     },
     {
-        name: "Fashionistas Sweetie Bracelet",
-        type: "Bracelet",
-        color: "Assorted",
-        description: "An assorted bracelet accessory that Fashionistas Sweetie Doll can wear to add a pop of color and style to her ensemble. This bracelet complements Sweetie's trendy outfit and adds a playful touch to her look.",
-        image: "Image link here",
+        name: "Fashionistas Sweetie Phone",
+        type: "Hand",
+        color: "Pink",
+        image: "./images/sweetiePhone.png",
         barbieID: fashionistaSweetie._id
     },
     {
-        name: "Fashionistas Sweetie Shoes",
+        name: "Fashionistas Sweetie Necklace",
+        type: "Necklace",
+        color: "Pink",
+        image: "./images/sweetiePinkNecklace.png",
+        barbieID: fashionistaSweetie._id
+    },
+    {
+        name: "Fashionistas Sweetie Heals",
         type: "Shoes",
-        color: "Assorted",
-        description: "A pair of assorted shoes that perfectly complement Fashionistas Sweetie Doll's chic style. These shoes are comfortable for walking and add a fashionable finishing touch to Sweetie's ensemble.",
-        image: "Image link here",
+        color: "Gold",
+        image: "./images/sweetieGold.png",
         barbieID: fashionistaSweetie._id
     },
     {
-        name: "Fashionistas Sweetie Hair Accessory",
-        type: "Hair",
-        color: "Assorted",
-        description: "An assorted hair accessory that Fashionistas Sweetie Doll can use to add flair to her hairstyle. This accessory adds a fun and playful touch to Sweetie's look, allowing her to express her unique style.",
-        image: "Image link here",
+        name: "Fashionistas Sweetie Bow Heals",
+        type: "Shoes",
+        color: "Blue",
+        image: "./images/sweetieBlue.png",
         barbieID: fashionistaSweetie._id
-    }        
+    },
+    {
+        name: "Fashionistas Sweetie Bow Heals",
+        type: "Shoes",
+        color: "Pink",
+        image: "./images/sweetiePink.png",
+        barbieID: fashionistaSweetie._id
+    },
+    {
+        name: "Fashionistas Sweetie Purse",
+        type: "Hand",
+        color: "Green",
+        image: "./images/sweetieGreenPurse.png",
+        barbieID: fashionistaSweetie._id
+    },
+    {
+        name: "Fashionistas Sweetie Bow Necklace",
+        type: "Necklace",
+        color: "Pink",
+        image: "./images/sweetieBowNecklace.png",
+        barbieID: fashionistaSweetie._id
+    }
   ]
 
   await Accessory.insertMany(accessories)

@@ -14,7 +14,7 @@ const resetCollections = async () => {
 }
 
 const main = async () => {
-    await (resetCollections) 
+    await resetCollections()
   const malibu = await Barbie.find({ name: "Malibu Barbie" })
   const dreamDate = await Barbie.find({ name: "Dream Date Barbie" })
   const totallyHair = await Barbie.find({ name: "Totally Hair 25th Anniversary" })
@@ -105,8 +105,14 @@ const main = async () => {
         name: "Barbie as Rapunzel Gown",
         type: "Dress",
         color: "Assorted",
-        description: "A majestic gown fit for a princess, inspired by Rapunzel's fairy tale. This gown features intricate details and luxurious fabrics, perfect for magical adventures.",
-        image: "Image link here",
+        image: "./images/rapunzelDress.png",
+        barbieID: rapunzel._id
+    },
+    {
+        name: "Barbie as Rapunzel Cape",
+        type: "Top",
+        color: "Assorted",
+        image: "./images/rapunzelCape.png",
         barbieID: rapunzel._id
     },
  
@@ -114,25 +120,36 @@ const main = async () => {
     {
         name: "Fashionistas Sweetie Dress",
         type: "Dress",
-        color: "Assorted",
-        description: "A trendy and chic dress reflecting the sweet and stylish personality of Fashionistas Sweetie Barbie, perfect for expressing her unique fashion sense.",
-        image: "Image link here",
+        color: "Pink",
+        image: "./images/sweetieDress.png",
         barbieID: fashionistaSweetie._id
     },
     {
-        name: "Fashionistas Sweetie Skirt",
-        type: "Skirt",
-        color: "Assorted",
-        description: "A fashionable skirt designed to complement Fashionistas Sweetie Barbie's trendy look, ideal for mixing and matching with other wardrobe pieces.",
-        image: "Image link here",
+        name: "Fashionistas Sweetie Halter Dress",
+        type: "Dress",
+        color: "Pink",
+        image: "./images/sweetieHalter.png",
         barbieID: fashionistaSweetie._id
     },
     {
-        name: "Fashionistas Sweetie Top",
+        name: "Fashionistas Sweetie Striped Dress",
+        type: "Dress",
+        color: "Pink",
+        image: "./images/sweetieDressStripe.png",
+        barbieID: fashionistaSweetie._id
+    },
+    {
+        name: "Fashionistas Sweetie Turtleneck Dress",
+        type: "Dress",
+        color: "Pink",
+        image: "./images/sweetiePinkDress.png",
+        barbieID: fashionistaSweetie._id
+    },
+    {
+        name: "Fashionistas Sweetie Jacket",
         type: "Top",
-        color: "Assorted",
-        description: "A stylish top that perfectly captures the sweet and trendy style of Fashionistas Sweetie Barbie, allowing her to stand out with confidence.",
-        image: "Image link here",
+        color: "Purple",
+        image: "./images/sweetieJacket.png",
         barbieID: fashionistaSweetie._id
     }
   ]

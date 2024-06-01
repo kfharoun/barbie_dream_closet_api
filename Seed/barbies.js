@@ -13,7 +13,7 @@ const resetCollections = async () => {
 }
 
 const main = async () => {
-  await (resetCollections) 
+  await resetCollections() 
     const barbies =
   [
     {
