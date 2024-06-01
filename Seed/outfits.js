@@ -27,18 +27,16 @@ const main = async () => {
     // malibu barbie
     {
         name: "Malibu Barbie Swimsuit",
-        type: "Clothing",
+        type: "Top",
         color: "Assorted",
-        description: "The iconic swimsuit that epitomizes the carefree and sun-kissed style of Malibu Barbie, perfect for beach days and pool parties.",
-        image: "Image link here",
+        image: "./images/malibuSuit.png",
         barbieID: malibu._id
     },
     {
         name: "Malibu Barbie Yellow Top and Pant Set",
-        type: "Clothing",
+        type: "Dress",
         color: "Yellow",
-        description: "A chic yellow top and pant set designed for Malibu Barbie, adding a stylish layer to her beach ensemble and reflecting the sunny vibes of Malibu.",
-        image: "Image link here",
+        image: "./images/malibuYellow.png",
         barbieID: malibu._id
     },
      
@@ -46,52 +44,60 @@ const main = async () => {
     {
         name: "Dream Date Barbie Evening Gown",
         type: "Dress",
+        color: "Purple",
+        image: "./images/dreamDress.png",
+        barbieID: dreamDate._id
+    },
+    {
+        name: "Dream Date Barbie Wrap",
+        type: "Bottoms",
         color: "Pink",
-        description: "A glamorous evening gown designed for Dream Date Barbie, typically in elegant fabrics with shimmering details, perfect for a romantic night out.",
-        image: "Image link here",
+        image: "./images/dreamSkirt.png",
         barbieID: dreamDate._id
     },
     // totally hair
     {
         name: "Totally Hair Barbie Dress",
         type: "Dress",
-        color: "Assorted",
-        description: "A vibrant and colorful dress reflecting the bold and trendy style of Totally Hair Barbie, featuring patterns and designs that capture the essence of the 1990s.",
-        image: "Image link here",
+        color: "Pink",
+        image: "./images/totallyDress.png",
         barbieID: totallyHair._id
     },
-    {
-        name: "Totally Hair Barbie Skirt",
-        type: "Skirt",
-        color: "Assorted",
-        description: "A trendy skirt reflecting the fashion trends of the 1990s, perfect for mixing and matching with Totally Hair Barbie's colorful tops and accessories.",
-        image: "Image link here",
-        barbieID: totallyHair._id
-    }, 
  
     // generation girl
     {
-        name: "Barbie Generation Girl Top",
-        type: "Top",
-        color: "Assorted",
-        description: "A trendy top reflecting the fashion-forward style of Barbie Generation Girl, perfect for expressing individuality and confidence.",
-        image: "Image link here",
+        name: "Barbie Generation Girl Skirt",
+        type: "Bottoms",
+        color: "Blue",
+        image: "./images/genSkirt.png",
         barbieID: generationGirl._id
     },
     {
-        name: "Barbie Generation Girl Skirt",
-        type: "Skirt",
-        color: "Assorted",
-        description: "A stylish skirt designed to complement Barbie Generation Girl's chic and modern look, ideal for mixing and matching with other wardrobe pieces.",
-        image: "Image link here",
+        name: "Barbie Generation Girl Jacket",
+        type: "Top",
+        color: "Blue",
+        image: "./images/genJacket.png",
         barbieID: generationGirl._id
     },
     {
         name: "Barbie Generation Girl Tights",
-        type: "Tights",
-        color: "Assorted",
-        description: "Assorted tights to add flair and personality to Barbie Generation Girl's outfit, providing warmth and style for any occasion.",
-        image: "Image link here",
+        type: "Bottoms",
+        color: "Blue",
+        image: "./images/genTights.png",
+        barbieID: generationGirl._id
+    },
+    {
+        name: "Barbie Generation Girl Bodysuit",
+        type: "Top",
+        color: "Red",
+        image: "./images/genBody.png",
+        barbieID: generationGirl._id
+    },
+    {
+        name: "Barbie Generation Girl Dress",
+        type: "Dress",
+        color: "Blue",
+        image: "./images/genDress.png",
         barbieID: generationGirl._id
     },
     // barbie as rapunzel

@@ -30,33 +30,28 @@ const main = async () => {
     {
         name: "Malibu Barbie Sunglasses",
         type: "Glasses",
-        color: "Assorted",
-        description: "Chic sunglasses designed to shield Malibu Barbie's eyes from the sun while adding a touch of glamour to her beach look.",
-        image: "Image link here",
+        image: "./images/malibuGlasses.png",
         barbieID: malibu._id
     },
     {
-        name: "Malibu Barbie Sandals",
+        name: "Malibu Barbie Shoes",
         type: "Shoes",
-        color: "Assorted",
-        description: "Stylish sandals perfect for strolling along the sandy shores of Malibu, ensuring Barbie stays comfortable and fashionable.",
-        image: "Image link here",
+        color: "Yellow",
+        image: "./images/malibuShoes.png",
         barbieID: malibu._id
     },
     {
-        name: "Malibu Barbie Beach Bag",
-        type: "Bag",
-        color: "Assorted",
-        description: "A trendy beach bag designed to hold Malibu Barbie's essentials for a day of fun in the sun, adding a touch of practicality to her beach ensemble.",
-        image: "Image link here",
+        name: "Malibu Barbie Book",
+        type: "Hand",
+        color: "Pink"
+        image: "./images/malibuBook.png",
         barbieID: malibu._id
     },
     {
-        name: "Malibu Barbie Hat",
-        type: "Hat",
-        color: "Assorted",
-        description: "A stylish hat that provides shade and style for Malibu Barbie's beach adventures, ensuring she looks fabulous while staying protected from the sun.",
-        image: "Image link here",
+        name: "Malibu Barbie Towel",
+        type: "Hand",
+        color: "Yellow",
+        image: "./images/malibuTowel.png",
         barbieID: malibu._id
     },
     // dream date barbie
@@ -64,42 +59,30 @@ const main = async () => {
     {
         name: "Dream Date Barbie Shoes",
         type: "Shoes",
-        color: "White",
-        description: "A pair of white heels or flats that perfectly complement Dream Date Barbie's outfit. These shoes are comfortable for dancing and add an elegant finishing touch to her ensemble.",
-        image: "Image link here",
-        barbieID: dreamDate._id
-    },
-    {
-        name: "Dream Date Barbie Clutch",
-        type: "Bag",
-        color: "Silver",
-        description: "A sleek silver clutch purse designed to hold Dream Date Barbie's essentials for the evening. It adds sophistication to her ensemble while being practical for carrying lipstick, keys, and other small items.",
-        image: "Image link here",
-        barbieID: dreamDate._id
-    },
-    {
-        name: "Dream Date Barbie Scarf",
-        type: "Necklace",
         color: "Pink",
-        description: "A soft pink scarf that Dream Date Barbie can drape elegantly around her shoulders or tie around her neck. It adds a pop of color to her outfit and keeps her warm on chilly evenings.",
-        image: "Image link here",
+        image: "./images/dreamShoes.png",
         barbieID: dreamDate._id
     },
     {
-        name: "Dream Date Barbie Bracelet",
-        type: "Bracelet",
-        color: "Silver",
-        description: "A delicate silver bracelet that adds a touch of glamour to Dream Date Barbie's wrist. It complements her overall look and adds sparkle as she dances the night away.",
-        image: "Image link here",
+        name: "Dream Date Barbie Mirror",
+        type: "Hand",
+        color: "Purple",
+        image: "./images/dreamMirror.png",
+        barbieID: dreamDate._id
+    },
+    {
+        name: "Dream Date Barbie Brush",
+        type: "Hair",
+        color: "Purple",
+        image: "./images/dreamBrush.png",
         barbieID: dreamDate._id
     },
     // totally hair 
     {
-        name: "Totally Hair Barbie Hairbrush",
+        name: "Totally Hair Barbie Haircomb",
         type: "Hair",
         color: "Pink",
-        description: "A pink hairbrush designed to style the long and colorful hair of Totally Hair 25th Anniversary Barbie Doll. This hairbrush helps Barbie maintain her signature look and keeps her hair smooth and tangle-free.",
-        image: "Image link here",
+        image: "./images/hairComb.png",
         barbieID: totallyHair._id
     },
     {
@@ -111,70 +94,125 @@ const main = async () => {
         barbieID: totallyHair._id
     },
     {
-        name: "Totally Hair Barbie Hair Accessories",
-        type: "Hair",
-        color: "Assorted",
-        description: "A set of assorted hair accessories, including clips, bows, and hair ties, designed to style Totally Hair 25th Anniversary Barbie Doll's vibrant hair. These accessories add fun and flair to Barbie's look, allowing for endless styling possibilities.",
-        image: "Image link here",
+        name: "Totally Hair Barbie Book",
+        type: "Hand",
+        color: "Pink",
+        image: "./images/hairBook.png",
+        barbieID: totallyHair._id
+    },
+    {
+        name: "Totally Hair Barbie Headband",
+        type: "Head",
+        color: "Pink",
+        image: "./images/hairHeadband.png",
         barbieID: totallyHair._id
     },
     {
         name: "Totally Hair Barbie Necklace",
         type: "Necklace",
-        color: "Silver",
-        description: "A silver necklace designed to accessorize Totally Hair 25th Anniversary Barbie Doll's trendy ensemble. This necklace adds a touch of glamour to Barbie's look, complementing her vibrant hair and fashionable outfit.",
-        image: "Image link here",
+        color: "Pink",
+        image: "./images/hairNecklace.png",
         barbieID: totallyHair._id
     },
     {
-        name: "Totally Hair Barbie Bracelet",
-        type: "Necklace",
+        name: "Totally Hair Barbie Scrunchie",
+        type: "Hair",
+        color: "Purple",
+        image: "./images/hairScrunchie.png",
+        barbieID: totallyHair._id
+    },
+    {
+        name: "Totally Hair Barbie Scrunchie",
+        type: "Hair",
         color: "Pink",
-        description: "A pink bracelet designed to add a pop of color to Totally Hair 25th Anniversary Barbie Doll's outfit. This bracelet complements Barbie's colorful style and adds a playful touch to her ensemble.",
-        image: "Image link here",
+        image: "./images/hairScrunchiePink.png",
+        barbieID: totallyHair._id
+    },
+    {
+        name: "Totally Hair Barbie Shoes",
+        type: "Shoes",
+        color: "Pink",
+        image: "./images/hairShoes.png",
         barbieID: totallyHair._id
     },
     // generation girl
     {
-        name: "Barbie Generation Girl Backpack",
-        type: "Accessory",
-        color: "Blue",
-        description: "A blue backpack designed to complement Barbie Generation Girl Doll's trendy style. This backpack is spacious enough to carry all of Barbie's school essentials while adding a touch of flair to her look.",
-        image: "Image link here",
-        barbieID: generationGirl._id
-    },
-    {
-        name: "Barbie Generation Girl Book",
-        type: "Accessory",
-        color: "Assorted",
-        description: "An assorted book accessory that Barbie Generation Girl Doll can hold or carry. This book adds a realistic touch to Barbie's schoolgirl ensemble, allowing her to study and learn while looking fashionable.",
-        image: "Image link here",
+        name: "Barbie Generation Girl Bag",
+        type: "Bag",
+        color: "Red",
+        image: "./images/genBag.png",
         barbieID: generationGirl._id
     },
     {
         name: "Barbie Generation Girl Sunglasses",
-        type: "Accessory",
-        color: "Black",
-        description: "A pair of black sunglasses designed to shield Barbie Generation Girl Doll's eyes from the sun while adding a stylish flair to her outfit. These sunglasses complement Barbie's trendy look and add a touch of coolness to her ensemble.",
-        image: "Image link here",
+        type: "Glasses",
+        color: "Blue",
+        image: "./images/genGlasses.png",
         barbieID: generationGirl._id
     },
     {
-        name: "Barbie Generation Girl Bracelet",
-        type: "Jewelry",
-        color: "Assorted",
-        description: "An assorted bracelet accessory that Barbie Generation Girl Doll can wear to add a pop of color and style to her ensemble. This bracelet complements Barbie's trendy outfit and adds a playful touch to her look.",
-        image: "Image link here",
+        name: "Barbie Generation Girl Film Slate",
+        type: "Hand",
+        color: "Silver",
+        image: "./images/genSlate.png",
         barbieID: generationGirl._id
     },
     {
-        name: "Barbie Generation Girl Shoes",
+        name: "Barbie Generation Girl Heals",
         type: "Shoes",
-        color: "Assorted",
-        description: "A pair of assorted shoes that perfectly complement Barbie Generation Girl Doll's trendy style. These shoes are comfortable for walking and add a fashionable finishing touch to Barbie's ensemble.",
-        image: "Image link here",
+        color: "Red",
+        image: "./images/genHeals.png",
         barbieID: generationGirl._id
     }, 
+    {
+        name: "Barbie Generation Girl Video Tape",
+        type: "Hand",
+        color: "Yellow",
+        image: "./images/genTape.png",
+        barbieID: generationGirl._id
+    }, 
+    {
+        name: "Barbie Generation Girl Video Tape",
+        type: "Hand",
+        color: "Yellow",
+        image: "./images/genTapeSilver.png",
+        barbieID: generationGirl._id
+    }, 
+    {
+        name: "Barbie Generation Girl Magazine",
+        type: "Hand",
+        color: "White",
+        image: "./images/genMagazine.png",
+        barbieID: generationGirl._id
+    },
+    {
+        name: "Barbie Generation Girl Camera",
+        type: "Hand",
+        color: "Silver",
+        image: "./images/genCamera.png",
+        barbieID: generationGirl._id
+    },
+    {
+        name: "Barbie Generation Girl Cell Phone",
+        type: "Hand",
+        color: "Black",
+        image: "./images/genPhone.png",
+        barbieID: generationGirl._id
+    },
+    {
+        name: "Barbie Generation Girl Necklace",
+        type: "Necklace",
+        color: "Blue",
+        image: "./images/genNecklace.png",
+        barbieID: generationGirl._id
+    },
+    {
+        name: "Barbie Generation Girl Boots",
+        type: "Shoes",
+        color: "Blue",
+        image: "./images/genBoots.png",
+        barbieID: generationGirl._id
+    },
     // barbie as rapunzel
     {
         name: "Barbie as Rapunzel Tiara",
