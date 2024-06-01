@@ -139,7 +139,7 @@ const main = async () => {
     // generation girl
     {
         name: "Barbie Generation Girl Bag",
-        type: "Bag",
+        type: "Hand",
         color: "Red",
         image: "./images/genBag.png",
         barbieID: generationGirl._id

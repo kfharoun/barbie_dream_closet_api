@@ -4,13 +4,15 @@ const { Accessory } = require('../Models')
 
 const getAllAccessories = async (req, res) => {
     try {
-        const accessories = await Accessory.find({})
+        const { type } = req.params
+        const accessories = await Accessory.find({ type: type })
         res.json(accessories)
     } catch (error) {
+        console.error("Error fetching accessories:", error);
         res.status(500).json({ error: error.message })
     }
-    
 }
+
 
 const getAccessoryById = async (req, res) => {
     const { id } = req.params;
@@ -24,6 +26,18 @@ const getAccessoryById = async (req, res) => {
         res.status(500).json({ error: error.message })
     }
 }
+
+const getAccessoriesByType = async (req, res) => {
+    try {
+        const type = req.params.type
+        const accessories = await Accessory.find({ type: { $regex: new RegExp(type, "i") } })
+        res.json(accessories)
+    } catch (error) {
+        console.error("Error fetching accessories by type:", error)
+        res.status(500).json({ error: error.message })
+    }
+}
+
 
 const deleteAccessory = async (req, res) => {
     const { id } = req.params
@@ -46,7 +60,7 @@ const updateAccessory  = async (req, res) => {
         if (accessory) {
             return res.status(200).json(accessory)
         }
-        throw new Error("Barbie not found")
+        throw new Error("accessory not found")
     } catch (error) {
         return res.status(500).send(error.message);
     }
@@ -70,5 +84,6 @@ module.exports = {
     getAccessoryById,
     createAccessory,
     updateAccessory,
-    deleteAccessory
+    deleteAccessory, 
+    getAccessoriesByType
 }

@@ -34,6 +34,9 @@ app.get('/barbie/:id', barbieController.getBarbieById)
 app.get('/accessory/:id', accessoryController.getAccessoryById)
 app.get(`/outfit/:id`, outfitController.getOutfitById)
 
+// get by Type
+app.get('/accessory/type/:type', accessoryController.getAccessoriesByType)
+
 // delete 
 app.delete(`/barbie/:id`, barbieController.deleteBarbie)
 app.delete(`/accessory/:id`, accessoryController.deleteAccessory)
