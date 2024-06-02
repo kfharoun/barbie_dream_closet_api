@@ -38,6 +38,37 @@ const getAccessoriesByType = async (req, res) => {
     }
 }
 
+const getAccessoriesByColor = async (req, res) => {
+    try {
+        const color = req.params.color
+        const accessories = await Accessory.find({ color: { $regex: new RegExp(color, "i") } })
+        res.json(accessories)
+    } catch (error) {
+        console.error("Error fetching accessories by color:", error)
+        res.status(500).json({ error: error.message })
+    }
+}
+
+const getAccessoriesByWord = async (req, res) => {
+    try {
+        const searchTerm = req.params.searchTerm
+        const accessories = await Accessory.find({
+            $or: [
+                { name: { $regex: new RegExp(searchTerm, "i") } },
+                { color: { $regex: new RegExp(searchTerm, "i") } },
+                { type: { $regex: new RegExp(searchTerm, "i") } }
+            ]
+        })
+        console.log("Accessories by search term:", accessories)
+        res.json(accessories)
+    } catch (error) {
+        console.error("Error fetching accessories by search term:", error)
+        res.status(500).json({ error: error.message })
+    }
+}
+
+
+
 
 const deleteAccessory = async (req, res) => {
     const { id } = req.params
@@ -85,5 +116,7 @@ module.exports = {
     createAccessory,
     updateAccessory,
     deleteAccessory, 
-    getAccessoriesByType
+    getAccessoriesByType, 
+    getAccessoriesByColor,
+    getAccessoriesByWord
 }

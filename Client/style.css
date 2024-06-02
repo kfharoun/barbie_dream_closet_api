@@ -1,0 +1,77 @@
+.container {
+    position: relative;
+    background-color: #ee7eb3;
+    height: 100vh;
+}
+
+.dreamHouse {
+    background-image: url("/images/barbieDream4.png");
+    background-position: center;
+    width: 57%;
+    height: 100%; 
+    max-width: 80%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: auto;
+    position: relative;
+    z-index: 1; /* Set z-index to 1 */
+}
+
+.bottomLine {
+    background-color: #e74b95;
+    width: 100%;
+    height: 10%; 
+    position: absolute;
+    bottom: 0;
+    z-index: 0; 
+}
+
+.barbies {
+    position: absolute;
+    top: 60%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); /* Adjust to center the container */
+    display: flex; 
+    flex-wrap: wrap; 
+    z-index: 3;
+    
+}
+
+.barbies > div {
+    width: calc(33.33% - 10px); 
+    padding: 5px;
+    display: flex; /* Enable flexbox layout */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    max-width: 80%; /* Ensure the div doesn't exceed its parent width */
+    height: 150px; /* Set a fixed height for the div */
+    
+}
+
+img {
+    max-width: 100%; /* Ensure images don't exceed their container's width */
+    height: auto;
+    max-height: 40%;
+}
+
+
+
+@media screen and (max-width: 500px){
+    .dreamHouse {
+        width: 95%;
+        height: 100%;
+}
+.bottomLine {
+    display: none;
+}
+}
+
+@media screen and (max-width: 900px) {
+    .dreamHouse {
+        width: 80%;
+    }
+.bottomLine{
+    height: 25%;
+}
+}

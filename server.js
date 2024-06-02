@@ -36,7 +36,16 @@ app.get(`/outfit/:id`, outfitController.getOutfitById)
 
 // get by Type
 app.get('/accessory/type/:type', accessoryController.getAccessoriesByType)
+app.get(`/outfit/type/:type`, outfitController.getOutfitByType)
 
+//  get by Color 
+app.get(`/accessory/color/:color`, accessoryController.getAccessoriesByColor)
+app.get(`/outfit/color/:color`, outfitController.getOutfitByColor)
+
+// get by word
+app.get('/accessories/search/:searchTerm', accessoryController.getAccessoriesByWord)
+app.get(`/outfit/search/:searchTerm`, outfitController.getOutfitByWord)
+app.get(`/barbie/search/:searchTerm`, barbieController.getBarbiesByWord)
 // delete 
 app.delete(`/barbie/:id`, barbieController.deleteBarbie)
 app.delete(`/accessory/:id`, accessoryController.deleteAccessory)

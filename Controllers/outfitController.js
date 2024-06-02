@@ -25,6 +25,46 @@ const getOutfitById = async (req, res) => {
     }
 }
 
+const getOutfitByType = async (req, res) => {
+    try {
+        const type = req.params.type
+        const clothes = await Outfit.find({ type: { $regex: new RegExp(type, "i") } })
+        res.json(clothes)
+    } catch (error) {
+        console.error("Error fetching outfit by type:", error)
+        res.status(500).json({ error: error.message })
+    }
+}
+
+const getOutfitByColor = async (req, res) => {
+    try {
+        const color = req.params.color
+        const outfit = await Outfit.find({ color: { $regex: new RegExp(color, "i") } })
+        res.json(outfit)
+    } catch (error) {
+        console.error("Error fetching outfit by color:", error)
+        res.status(500).json({ error: error.message })
+    }
+}
+
+const getOutfitByWord = async (req, res) => {
+    try {
+        const searchTerm = req.params.searchTerm
+        const outfit = await Outfit.find({
+            $or: [
+                { name: { $regex: new RegExp(searchTerm, "i") } },
+                { color: { $regex: new RegExp(searchTerm, "i") } },
+                { type: { $regex: new RegExp(searchTerm, "i") } }
+            ]
+        })
+        console.log("Outfit by search term:", outfit)
+        res.json(outfit)
+    } catch (error) {
+        console.error("Error fetching outfit by search term:", error)
+        res.status(500).json({ error: error.message })
+    }
+}
+
 const deleteOutfit = async (req, res) => {
     const { id } = req.params
     try {
@@ -70,5 +110,8 @@ module.exports = {
     getOutfitById, 
     deleteOutfit,
     createOutfit, 
-    updateOutfit
+    updateOutfit, 
+    getOutfitByType, 
+    getOutfitByColor, 
+    getOutfitByWord
 }

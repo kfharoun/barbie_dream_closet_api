@@ -25,6 +25,30 @@ const getBarbieById = async (req, res) => {
     }
 }
 
+const getBarbiesByWord = async (req, res) => {
+    try {
+        const searchTerm = req.params.searchTerm;
+        const regexTerm = new RegExp(searchTerm, 'i')
+        let releaseYear
+
+        if (!isNaN(searchTerm)) {
+            releaseYear = parseInt(searchTerm)
+        }
+
+        const barbies = await Barbie.find({
+            $or: [
+                { name: { $regex: regexTerm } },
+                { description: { $regex: regexTerm } },
+                { releaseYear: releaseYear } 
+            ]
+        })
+        res.json(barbies)
+    } catch (error) {
+        console.error("Error fetching barbies by search term:", error)
+        res.status(500).json({ error: error.message })
+    }
+}
+
 const deleteBarbie = async (req, res) => {
     const { id } = req.params
     try {
@@ -70,5 +94,6 @@ module.exports = {
     getBarbieById, 
     deleteBarbie,
     updateBarbie, 
-    createBarbie
+    createBarbie, 
+    getBarbiesByWord
 }
