@@ -1,3 +1,7 @@
+
+
+
+
 const displayBarbies = (barbies) => {
     const barbieInfo = document.querySelector('.barbies')
     barbieInfo.innerHTML = ''

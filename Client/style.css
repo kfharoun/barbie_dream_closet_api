@@ -1,7 +1,13 @@
+@font-face {
+    font-family: 'Bartex';
+    src: url('../barbie_dream_closet_api/fonts/Bartex-Regular.ttf') format('.tff')
+}
+
 body {
     position: relative;
     background-color: #ee7eb3;
     height: 100vh;
+    font-family: 'Bartex', sans-serif;
 }
 
 .dreamHouse {
@@ -9,8 +15,8 @@ body {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    width: 57%;
-    height: 100%; 
+    width: 700px;
+    height: 1020px; 
     max-width: 80%;
     position: fixed;
     top: 50%;
@@ -31,14 +37,13 @@ body {
 .barbies {
     position: fixed;
     top: 50%; 
-    left: 50%;
+    left: 52%;
     transform: translate(-50%, -50%); 
     display: flex; 
     flex-wrap: wrap; 
-    justify-content: space-between; 
     align-items: center; 
     width: 100%;
-    max-width: 45rem;
+    max-width: 50rem;
     z-index: 3;
     
 }
@@ -53,14 +58,84 @@ a {
 img {
     max-width: calc(33.33% - 1rem);
     max-height: auto; 
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
     max-width: 15rem; 
     max-height: auto;
-    width: 31%;
+    width: 50%;
     height: 100%; 
 }
 
+.barbieDesc {
+    position: absolute;
+    background-image: url("../images/barbiedesc.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 23%;
+    height: 1020px; 
+    max-width: 80%;
+    position: fixed;
+    top: 60%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    z-index: 3; 
+    overflow: auto;
+    /* display: none; */
+}
 
+#closetLink {
+    background-color: #e74b95;
+    color: #fef1f8;
+    border: none;
+    padding: 5%;
+    border-radius: 100px;
+    font-family: 'Bartex', sans-serif;
+    font-weight: bold;
+    font-size:medium;
+    text-shadow: 0 1px #fa98c7;
+    margin-top: 90%;
+    margin-left: 25%;
+    box-shadow: 0 5px #ffd0e6;
+}
+
+
+#closetLink:hover {
+    background-color: #e23e8b;
+}
+
+#closetLink:active {
+    background-color: #e03183;
+    box-shadow: 0 5px #fdc3de;
+}
+
+#releaseYear {
+    overflow: auto;
+    padding: 10px;
+    width: 70%;
+    height: 10%;
+    text-align: center;
+    margin-left: 12%;
+    margin-top: 25%;
+}
+
+#releaseYear::-webkit-scrollbar-track {
+    background-color: rgba(255, 0, 170, 0.033); 
+    border-radius: 10px;
+}
+
+#releaseYear::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 0, 170, 0.033); 
+    border-radius: 10px; 
+}
+
+#releaseYear::-webkit-scrollbar {
+    width: 6px; 
+}
+
+#releaseYear::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 0, 170, 0.649);
+    width: 6px;
+}
 
 @media screen and (max-width: 500px){
     .dreamHouse {
@@ -79,4 +154,10 @@ img {
 .bottomLine{
     height: 25%;
 }
+}
+
+@media screen and (max-width: 1200px) {
+    .barbies {
+        left: 53%;
+    }
 }
