@@ -29,7 +29,7 @@ const main = async () => {
         image: "../images/dreamDate.png"
       },
       {
-        name: "Totally Hair 25th Anniversary" ,
+        name: "Totally Hair Barbie" ,
         releaseYear: 2016, 
         description: "Totally Hair Barbie rocked the '90s with her long, flowing locks and vibrant style. Her hair was a dazzling cascade of blonde hair that reached down to her ankles, making her a standout among Barbie collectors. She wore a colorful, form-fitting minidress with bold patterns and accessorized with hoop earrings and chunky bracelets. This doll captured the essence of the fashionable and free-spirited '90s.", 
         image: "../images/totallyHair.png"

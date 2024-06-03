@@ -17,7 +17,7 @@ const main = async () => {
     await resetCollections()
   const malibu = await Barbie.find({ name: "Malibu Barbie" })
   const dreamDate = await Barbie.find({ name: "Dream Date Barbie" })
-  const totallyHair = await Barbie.find({ name: "Totally Hair 25th Anniversary" })
+  const totallyHair = await Barbie.find({ name: "Totally Hair Barbie" })
   const generationGirl = await Barbie.find({ name: "Generation Girl Barbie" })
   const rapunzel = await Barbie.find({ name: "Barbie as Rapunzel" })
   const fashionistaSweetie = await Barbie.find({ name: "Fashionista Sweetie Barbie" })
