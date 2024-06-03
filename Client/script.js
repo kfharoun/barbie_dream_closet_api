@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const releaseYear = document.getElementById("releaseYear")
     const description = document.getElementById("description")
     const barbieInfo = document.querySelector('.barbies')
+    const closetButton = document.getElementById(`closetLink`)
 
     const displayBarbies = (barbies) => {
         barbieInfo.innerHTML = ''
