@@ -4,9 +4,7 @@
 }
 
 body {
-    position: relative;
     background-color: #ee7eb3;
-    height: 100vh;
     font-family: 'Bartex', sans-serif;
 }
 
@@ -29,7 +27,7 @@ body {
     background-color: #e74b95;
     width: 100%;
     height: 10%; 
-    position: absolute;
+    position: fixed;
     bottom: 0;
     z-index: 0; 
 }
@@ -67,34 +65,33 @@ img {
 }
 
 .barbieDesc {
-    position: absolute;
+    position: fixed;
     background-image: url("../images/barbiedesc.png");
     background-size: contain;
     background-repeat: no-repeat;
-    width: 23%;
+    width: 28%;
     height: 1020px; 
     max-width: 80%;
-    position: fixed;
+    max-height: 100%;
     top: 60%;
     left: 15%;
     transform: translate(-50%, -50%);
     z-index: 3; 
     overflow: auto;
-    /* display: none; */
+    display: none;
 }
 
 #closetLink {
     background-color: #e74b95;
     color: #fef1f8;
     border: none;
-    padding: 5%;
+    padding: 3%;
     border-radius: 100px;
     font-family: 'Bartex', sans-serif;
     font-weight: bold;
     font-size:medium;
     text-shadow: 0 1px #fa98c7;
-    margin-top: 90%;
-    margin-left: 25%;
+    margin-left: 40%;
     box-shadow: 0 5px #ffd0e6;
 }
 
@@ -109,42 +106,65 @@ img {
 }
 
 #releaseYear {
-    overflow: auto;
-    padding: 10px;
-    width: 70%;
-    height: 10%;
-    text-align: center;
-    margin-left: 12%;
-    margin-top: 25%;
+    font-family: "Sniglet", system-ui;
+    font-weight: 800;
+    font-style: normal;
 }
 
-#releaseYear::-webkit-scrollbar-track {
+#description {
+    overflow: auto;
+    padding: 10px;
+    width: 50%;
+    max-width: 100%;
+    height: 10%;
+    max-height: 100%;
+    text-align: center;
+    font-size: medium;
+    font-family: "Sniglet", system-ui;
+    display: flex;
+    margin-left: 25%;
+    margin-top: 2%;
+    padding-top: 2%;
+}
+#description::-webkit-scrollbar-track {
     background-color: rgba(255, 0, 170, 0.033); 
     border-radius: 10px;
 }
-
-#releaseYear::-webkit-scrollbar-thumb {
+#description::-webkit-scrollbar-thumb {
     background-color: rgba(255, 0, 170, 0.033); 
     border-radius: 10px; 
 }
-
-#releaseYear::-webkit-scrollbar {
+#description::-webkit-scrollbar {
     width: 6px; 
 }
-
-#releaseYear::-webkit-scrollbar-thumb:hover {
+#description::-webkit-scrollbar-thumb:hover {
     background-color: rgba(255, 0, 170, 0.649);
     width: 6px;
 }
 
+#productName {
+    margin-top: 30%;
+    text-align: center;
+    margin-bottom:2%;
+    font-size: 25px;
+    word-wrap: normal;
+}
+#releaseYear {
+    padding-top: 0;
+    margin-top:0;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 22px;
+}
 @media screen and (max-width: 500px){
     .dreamHouse {
         width: 95%;
         height: 100%;
-}
-.bottomLine {
+    }
+    .bottomLine {
     display: none;
-}
+    }
+
 }
 
 @media screen and (max-width: 900px) {
@@ -159,5 +179,20 @@ img {
 @media screen and (max-width: 1200px) {
     .barbies {
         left: 53%;
+    }
+    #releaseYear, #productName{
+        font-size: medium;
+    }
+
+    #productName {
+        margin-top: 29%;
+    }
+    #description{
+        font-size: small;
+        height: 10%;
+    }
+    #closetLink {
+        margin-top: 15%;
+        margin-left: 34%;
     }
 }

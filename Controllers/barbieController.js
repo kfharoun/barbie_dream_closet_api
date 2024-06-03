@@ -63,6 +63,7 @@ const deleteBarbie = async (req, res) => {
 }
 
 
+
 const updateBarbie = async (req, res) => {
     try {
         let { id } = req.params;

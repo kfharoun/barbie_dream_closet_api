@@ -25,7 +25,6 @@ const getBarbies = async () => {
         const barbieData = await response.json()
         displayBarbies(barbieData)
     } catch (error) {
-        // Handle errors
         console.error('There was a problem with the fetch operation:', error)
     }
 }
