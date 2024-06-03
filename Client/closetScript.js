@@ -1,7 +1,3 @@
-
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const productName = document.getElementById("productName")
     const releaseYear = document.getElementById("releaseYear")
@@ -54,5 +50,3 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector(`.barbieDesc`).style.display=`none`
 })
 })
-
-

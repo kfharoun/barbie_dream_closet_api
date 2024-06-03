@@ -102,7 +102,7 @@ img {
 
 #closetLink:active {
     background-color: #e03183;
-    box-shadow: 0 5px #fdc3de;
+    box-shadow: 0 2px #fdc3de;
 }
 
 #description {
@@ -157,6 +157,31 @@ img {
     font-weight: 500;
     font-style: normal;
 }
+
+#closeDesc {
+    position: fixed;
+    z-index: 5;
+    background-color: rgba(255, 0, 170, 0);
+    border: none;
+    font-size: 60px;
+    font-family: "Sniglet", system-ui;
+    font-weight: 800;
+    font-style: normal;
+    color:#fdc3de;
+    text-shadow:0 5px #e03183;
+    margin-top: 10%;
+    margin-left: 70%;
+    width: 10%;
+}
+
+#closeDesc:hover {
+    color:#fabdda;
+}
+
+#closeDesc:active {
+    color: #fdaad1;
+    text-shadow:0 2px #e03183;
+}
 @media screen and (max-width: 500px){
     .dreamHouse {
         width: 95%;
@@ -195,5 +220,8 @@ img {
     #closetLink {
         margin-top: 15%;
         margin-left: 34%;
+    }
+    #closeDesc {
+        font-size: 30px;
     }
 }
