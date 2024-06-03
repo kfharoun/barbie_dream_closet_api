@@ -7,9 +7,9 @@ const displayBarbies = (barbies) => {
         const barbieLink = document.createElement('a')
         barbieLink.href = `barbieInfo.html?id=${barbie.id}`
         barbieLink.innerHTML = `
-            <img src="${barbie.image}" alt="${barbie.name} class="barbiePic">
+            <img src="${barbie.image}" alt="${barbie.name} class="barbiePic ${barbie.name}">
         `
-        
+        console.log(barbie.name)
         barbieContainer.appendChild(barbieLink)
         barbieInfo.appendChild(barbieContainer)
     })

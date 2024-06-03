@@ -1,4 +1,4 @@
-.container {
+body {
     position: relative;
     background-color: #ee7eb3;
     height: 100vh;
@@ -7,14 +7,16 @@
 .dreamHouse {
     background-image: url("/images/barbieDream4.png");
     background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 57%;
     height: 100%; 
     max-width: 80%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    margin: auto;
-    position: relative;
-    z-index: 1; /* Set z-index to 1 */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; 
 }
 
 .bottomLine {
@@ -27,32 +29,35 @@
 }
 
 .barbies {
-    position: absolute;
-    top: 60%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); /* Adjust to center the container */
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
     display: flex; 
     flex-wrap: wrap; 
+    justify-content: space-between; 
+    align-items: center; 
+    width: 100%;
+    max-width: 45rem;
     z-index: 3;
     
 }
 
-.barbies > div {
-    width: calc(33.33% - 10px); 
-    padding: 5px;
-    display: flex; /* Enable flexbox layout */
-    flex-direction: column; /* Arrange items vertically */
-    justify-content: center; /* Center the content horizontally */
-    align-items: center; /* Center the content vertically */
-    max-width: 80%; /* Ensure the div doesn't exceed its parent width */
-    height: 150px; /* Set a fixed height for the div */
-    
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
 img {
-    max-width: 100%; /* Ensure images don't exceed their container's width */
-    height: auto;
-    max-height: 40%;
+    max-width: calc(33.33% - 1rem);
+    max-height: auto; 
+    margin-bottom: 1rem;
+    max-width: 15rem; 
+    max-height: auto;
+    width: 31%;
+    height: 100%; 
 }
 
 
