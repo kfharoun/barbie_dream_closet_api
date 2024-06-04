@@ -58,5 +58,3 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector(`.barbieDesc`).style.display=`none`
 })
 })
-
-

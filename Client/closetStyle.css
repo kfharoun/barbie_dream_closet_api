@@ -1,0 +1,13 @@
+.barbie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+}
+
+.productImage {
+    width: 40%;
+    height: 30%;
+    
+}
+
