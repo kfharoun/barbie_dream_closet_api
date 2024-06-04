@@ -1,7 +1,5 @@
 const { Outfit } = require('../Models')
 
-
-
 const getAllOutfits = async (req, res) => {
     try {
         const outfits = await Outfit.find({})

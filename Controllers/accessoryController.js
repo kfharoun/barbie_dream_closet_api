@@ -4,8 +4,7 @@ const { Accessory } = require('../Models')
 
 const getAllAccessories = async (req, res) => {
     try {
-        const { type } = req.params
-        const accessories = await Accessory.find({ type: type })
+        const accessories = await Accessory.find({})
         res.json(accessories)
     } catch (error) {
         console.error("Error fetching accessories:", error);
@@ -38,6 +37,7 @@ const getAccessoriesByType = async (req, res) => {
     }
 }
 
+
 const getAccessoriesByColor = async (req, res) => {
     try {
         const color = req.params.color
@@ -67,7 +67,16 @@ const getAccessoriesByWord = async (req, res) => {
     }
 }
 
-
+const getAccessoriesByBarbieId = async (req, res) => {
+    try {
+        const barbieId = req.params.barbieId;
+        const accessories = await Accessory.find({ barbieId })
+        res.json(accessories);
+    } catch (error) {
+        console.error("Error fetching accessories by Barbie ID:", error)
+        res.status(500).json({ error: error.message })
+    }
+}
 
 
 const deleteAccessory = async (req, res) => {
@@ -110,6 +119,7 @@ const createAccessory  = async (req, res) => {
 }
 
 
+
 module.exports = {
     getAllAccessories,
     getAccessoryById,
@@ -118,5 +128,6 @@ module.exports = {
     deleteAccessory, 
     getAccessoriesByType, 
     getAccessoriesByColor,
-    getAccessoriesByWord
+    getAccessoriesByWord,
+    getAccessoriesByBarbieId
 }

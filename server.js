@@ -60,3 +60,6 @@ app.put(`/outfit/:id`, outfitController.updateOutfit)
 app.post(`/barbie`, barbieController.createBarbie)
 app.post(`/accessory`, accessoryController.createAccessory)
 app.post(`/outfit`, outfitController.createOutfit)
+
+// get by barbie ID
+app.get('/accessory/barbie/:barbieId', accessoryController.getAccessoriesByBarbieId)
