@@ -41,13 +41,17 @@ document.addEventListener('DOMContentLoaded', () => {
             description.textContent = barbieDetails.description
 
             document.querySelector(`.barbieDesc`).style.display = `block`
+
+            const closetButton = document.getElementById('closetLink')
+            closetButton.addEventListener('click', function() {
+                window.location.href=`closetIndex.html?id=${barbieId}`
+            })
         } catch (error) {
             console.error(`unable to fetch barbie details:`, error)
         }
     }
 
     getBarbies()
-    const closetButton = document.getElementById(`closetLink`)
 
     const popupClose = document.getElementById(`closeDesc`)
     popupClose.addEventListener(`click`, function(){
