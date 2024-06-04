@@ -1,6 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', async () => {
-    const accessory = document.querySelector('.accessory')
+    const accessoryInfo = document.querySelector('.accessory')
 
     const getBarbieById = async (barbieId) => {
         try {
@@ -11,41 +11,35 @@ document.addEventListener('DOMContentLoaded', async () => {
             return null
         }
     }
+   
+
+    const displayAccessoriesById = (accessories) => {
+        accessoryInfo.innerHTML = ''
+        accessories.forEach(accessory => {
+            const accessoryContainer = document.createElement('div')
+            // barbieLink.onclick = () => displayPopup(barbie._id)
+            accessoryContainer.innerHTML = `
+                <img src="${accessory.image}" alt="${accessory.name}" class="barbiePic ${accessory.name}">
+            `
+            accessoryInfo.appendChild(accessoryContainer)
+        })
+    }
+    
 
     const getAccessoriesById = async (barbieId) => {
         try {
-            const accessoryData = await axios.get(`http://localhost:3001/accessory/barbie/${barbieId}`);
-            return accessoryData.data;
+            const barbieUrl = new URLSearchParams(window.location.search)
+            // console.log("barbieURL:", barbieUrl)
+            const barbieId = barbieUrl.get('id')
+            // console.log("barbieId:", barbieId)
+            const response = await fetch(`http://localhost:3001/accessory/barbie/${barbieId}`)
+            // console.log("response:", response)
+            const accessoryData = await response.json()
+            console.log("accessoryData:", accessoryData)
+            displayAccessoriesById(accessoryData)
         } catch (error) {
-            console.error(`Can't find accessories for Barbie:`, error.message);
-            return null;
-        }
-    }
-    
-    const displayAccessory = async () => {
-        try {
-            const barbieUrl = new URLSearchParams(window.location.search);
-            const barbieId = barbieUrl.get(`id`);
-    
-            if (barbieId) {
-                const accessories = await getAccessoriesById(barbieId);
-                if (accessories) {
-                    accessory.innerHTML = ``;
-                    accessories.forEach(accessory => {
-                        const accessoryContainer = document.createElement(`div`);
-                        accessoryContainer.innerHTML = `
-                            <img src="${accessory.image}" alt="${accessory.name}" class="accessory">
-                        `;
-                        accessory.appendChild(accessoryContainer);
-                    });
-                } else {
-                    console.log(`Accessories not found for Barbie`);
-                }
-            } else {
-                console.log(`Barbie id not found in URL`);
-            }
-        } catch (error) {
-            console.error(`Error displaying accessories for Barbie:`, error.message);
+            console.error(`Can't find accessories for Barbie:`, error.message)
+            return null
         }
     }
 
@@ -71,10 +65,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.error(`Error:`, error.message)
         }
     }
-
-    displayAccessory()
-
-    displayAccessory()
+    displayBarbieById()
+    getAccessoriesById()
+    
+    
 })
 
 

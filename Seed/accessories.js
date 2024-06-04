@@ -23,7 +23,7 @@ const main = async () => {
   const rapunzel = await Barbie.findOne({ name: "Barbie as Rapunzel" })
   const fashionistaSweetie = await Barbie.findOne({ name: "Fashionista Sweetie Barbie" })
   
- 
+
   const accessories = [
     
     // malibu barbie

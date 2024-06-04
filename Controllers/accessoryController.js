@@ -70,8 +70,12 @@ const getAccessoriesByWord = async (req, res) => {
 const getAccessoriesByBarbieId = async (req, res) => {
     try {
         const barbieId = req.params.barbieId;
+        console.log("barbieId:", barbieId)
         const accessories = await Accessory.find({ barbieId })
-        res.json(accessories);
+        console.log("accessories:", accessories)
+        console.log("objectID2:", barbieId)
+        console.log("Accessory:", Accessory)
+        res.json(accessories)
     } catch (error) {
         console.error("Error fetching accessories by Barbie ID:", error)
         res.status(500).json({ error: error.message })

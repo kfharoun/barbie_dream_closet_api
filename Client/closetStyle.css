@@ -2,6 +2,7 @@
 body {
     background-color: #ee7eb3;
     font-family: 'Bartex', sans-serif;
+    height: 100vh;
 }
 .barbie {
     left: 33%;
@@ -43,4 +44,7 @@ body {
 
 }
 
-
+.accessory {
+    left: 33%;
+    z-index: 3;
+}

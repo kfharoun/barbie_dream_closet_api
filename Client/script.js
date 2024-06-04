@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             description.textContent = barbieDetails.description
 
             document.querySelector(`.barbieDesc`).style.display = `block`
-
+            console.log(barbieId)
             const closetButton = document.getElementById('closetLink')
             closetButton.addEventListener('click', function() {
                 window.location.href=`closetIndex.html?id=${barbieId}`
