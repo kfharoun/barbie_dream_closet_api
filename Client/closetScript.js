@@ -1,5 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
+    const accessory = document.querySelector(`.accessory`)
+
 const getBarbieById = async (barbieId) =>  {
     try {
         const barbie = await axios.get(`http://localhost:3001/barbie/${barbieId}`)
@@ -10,6 +12,27 @@ const getBarbieById = async (barbieId) =>  {
     }
 }
 
+const getAccessory = async (barbieId) => {
+    try {
+        const getAccessory = await axios.get(`http://localhost:3001/accessory`)
+        return getAccessory.data
+    }catch (error) {
+        console.error(`can't find accessory:`, error.message)
+        return null
+    }
+}
+
+const displayAccessory = (barbies) => {
+    accessory.innerHTML = ``
+    accessories.forEach (accessory => {
+        const accessoryContainer = document.createElement(`div`)
+        accessory.innerHTML = `
+        <img src="${accessory.image}" alt="${accessory.name}" class="accessory">
+        `
+        console.log(accessory)
+        accessoryContainer.appendChild(accessory)
+    })
+}
 const displayBarbiesById = async () => {
     try {
         const barbieUrl = new URLSearchParams(window.location.search)
@@ -34,5 +57,6 @@ const displayBarbiesById = async () => {
 }
 
 displayBarbiesById()
+displayAccessory()
 })
 
