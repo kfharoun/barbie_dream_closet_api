@@ -18,7 +18,9 @@ document.addEventListener('DOMContentLoaded', async () => {
         outfits.forEach(outfit => {
             const outfitContainer = document.createElement(`div`)
             outfitContainer.innerHTML=`
+            <div class="bubbleOutfit">
             <img src="${outfit.image}" alt="(outfit.name)" class="outfitPic ${outfit.name}">
+            </div>
             `
             outfitInfo.appendChild(outfitContainer)
         })
