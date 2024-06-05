@@ -38,18 +38,25 @@ document.addEventListener('DOMContentLoaded', async () => {
         return null
         }
     }
-   
 
+    const removeAccessories = (accessoryContainer) => {
+        console.log(accessoryContainer.querySelector('img').alt)
+        accessoryContainer.style.display = 'none'
+    }
+    
     const displayAccessoriesById = (accessories) => {
         accessoryInfo.innerHTML = ''
         accessories.forEach(accessory => {
             const accessoryContainer = document.createElement('div')
             accessoryContainer.innerHTML = `
-            <div class="bubble">
-                <img src="${accessory.image}" alt="${accessory.name}" class="accessoryPic ${accessory.name}">
-            </div>
-                `
-            accessoryInfo.appendChild(accessoryContainer)
+                <div class="bubble ${accessory.name}">
+                    <img src="${accessory.image}" alt="${accessory.name}" class="accessoryPic ${accessory.name}">
+                </div>
+            `
+            accessoryContainer.addEventListener('click', function(){
+                removeAccessories(accessoryContainer);
+            })
+            accessoryInfo.appendChild(accessoryContainer);
         })
     }
     
@@ -93,11 +100,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             console.error(`Error:`, error.message)
         }
     }
+
     displayBarbieById()
     getAccessoriesById()
     getOutfitsById()
-    
-    
+  
 })
 
 
