@@ -102,6 +102,17 @@ const createOutfit  = async (req, res) => {
     }
 }
 
+const getOutfitsByBarbieId = async (req, res) => {
+    try {
+        const barbieId = req.params.barbieId
+        console.log("barbieId:", barbieId)
+        const outfits = await Outfit.find({ barbieId })
+        res.json(outfits)
+    } catch (error) {
+        console.error("Error fetching outfits by Barbie ID:", error)
+        res.status(500).json({ error: error.message })
+    }
+}
 
 module.exports = {
     getAllOutfits, 
@@ -111,5 +122,6 @@ module.exports = {
     updateOutfit, 
     getOutfitByType, 
     getOutfitByColor, 
-    getOutfitByWord
+    getOutfitByWord, 
+    getOutfitsByBarbieId
 }

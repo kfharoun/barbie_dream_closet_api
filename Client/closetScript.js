@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', async () => {
     const accessoryInfo = document.querySelector('.accessory')
+    const outfitInfo = document.querySelector(`.outfits`)
 
     const getBarbieById = async (barbieId) => {
         try {
@@ -11,16 +12,41 @@ document.addEventListener('DOMContentLoaded', async () => {
             return null
         }
     }
+
+    const displayOutfitsById = (outfits) => {
+        outfitInfo.innerHTML = ``
+        outfits.forEach(outfit => {
+            const outfitContainer = document.createElement(`div`)
+            outfitContainer.innerHTML=`
+            <img src="${outfit.image}" alt="(outfit.name)" class="outfitPic ${outfit.name}">
+            `
+            outfitInfo.appendChild(outfitContainer)
+        })
+    }
+
+    const getOutfitsById = async (barbieId) => {
+        try {
+        const barbieUrl = new URLSearchParams(window.location.search)
+        barbieId = barbieUrl.get(`id`)
+        const response = await fetch (`http://localhost:3001/outfit/barbie/${barbieId}`)
+        const outfitData = await response.json()
+        displayOutfitsById(outfitData)
+    } catch (error) {
+        console.log(`error fetching outfits by ID:`, error.message)
+        return null
+        }
+    }
    
 
     const displayAccessoriesById = (accessories) => {
         accessoryInfo.innerHTML = ''
         accessories.forEach(accessory => {
             const accessoryContainer = document.createElement('div')
-            // barbieLink.onclick = () => displayPopup(barbie._id)
             accessoryContainer.innerHTML = `
-                <img src="${accessory.image}" alt="${accessory.name}" class="barbiePic ${accessory.name}">
-            `
+            <div class="bubble">
+                <img src="${accessory.image}" alt="${accessory.name}" class="accessoryPic ${accessory.name}">
+            </div>
+                `
             accessoryInfo.appendChild(accessoryContainer)
         })
     }
@@ -35,7 +61,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const response = await fetch(`http://localhost:3001/accessory/barbie/${barbieId}`)
             // console.log("response:", response)
             const accessoryData = await response.json()
-            console.log("accessoryData:", accessoryData)
+            // console.log("accessoryData:", accessoryData)
             displayAccessoriesById(accessoryData)
         } catch (error) {
             console.error(`Can't find accessories for Barbie:`, error.message)
@@ -67,6 +93,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     displayBarbieById()
     getAccessoriesById()
+    getOutfitsById()
     
     
 })

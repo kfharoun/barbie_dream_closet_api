@@ -87,14 +87,6 @@ const main = async () => {
         barbieId: totallyHair._id
     },
     {
-        name: "Totally Hair Barbie Shoes",
-        type: "Shoes",
-        color: "Assorted",
-        description: "Stylish shoes designed to complement Totally Hair Barbie's ensemble, ensuring she stays fashionable while rocking her iconic long hair.",
-        image: "Image link here",
-        barbieId: totallyHair._id
-    },
-    {
         name: "Totally Hair Barbie Book",
         type: "Hand",
         color: "Pink",
@@ -226,7 +218,7 @@ const main = async () => {
         name: "Barbie as Rapunzel Musical Brush",
         type: "Hair",
         color: "Pink",
-        image: "../images/rapunzelCrown.png",
+        image: "../images/rapunzelBrush.png",
         barbieId: rapunzel._id
     },
     {

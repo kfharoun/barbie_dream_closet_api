@@ -43,8 +43,198 @@ body {
     border-radius: 50% 50% 0% 0%;
 
 }
+h2 {
+    position: fixed;
+    z-index: 3;
+}
+
+.accessoryPic {
+    left: 50%;
+    z-index: 3;
+    width: 8vh;
+    height: auto;
+    max-width: 10vh;
+    padding-top: 1vh;
+    margin: 0 5vh 0 0;
+}
+
+.bubble {
+    left: 50%;
+    z-index: 3;
+    width: 8vh;
+    height: 8vh;
+    background-color: #fef1f8;
+    z-index: 2;
+    border-radius: 10vh;
+    margin-top: 2vh;
+    box-shadow: 0 5px #ffd0e6;
+    margin-bottom: 2vh;
+}
+
+.outfitPic {
+    z-index: 3;
+    width: 10vh;
+    height: auto;
+}
+
+
+.accessoryContainer {
+    left: 50%;
+}
 
 .accessory {
-    left: 33%;
+    position: fixed;
+    left: 20vh;
+    top: 50vh;
+    transform: translate(-50%, -50%); 
     z-index: 3;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    height: 60vh;
+}
+
+.outfits {
+    position: fixed;
+    left: 40vh;
+    top: 50vh; 
+    transform: translate(-50%, -50%); 
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    height: 60vh;
+    /* display: none; */
+}
+/* individual outfit and accessory styling */
+
+/* gen girl barbie */
+.Magazine, .Book {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.outfitPic.Barbie.Generation.Girl.Jacket {
+    width: 20vh;
+}
+.outfitPic.Barbie.Generation.Girl.Skirt {
+    width: 15vh;
+    padding-top: 20vh;
+}
+.Malibu.Barbie.Shoes {
+    max-width: 5vh;
+    margin-left: 2vh;
+}
+.Necklace {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.Boots {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.Generation.Boots {
+    width: 7vh;
+    margin-left: .5vh;
+}
+/* malibu barbie */
+.Malibu.Barbie.Sunglasses {
+    padding-top: 2vh;
+}
+
+/* dream date */
+
+.accessoryPic.Dream.Date.Barbie {
+    max-width: 5vh;
+    margin-left: 1.5vh;
+}
+.Date.Barbie.Brush, .Date.Barbie.Mirror {
+    padding-top: 0;
+}
+/* totally hair */
+.accessoryPic.Totally.Hair {
+    max-width: 8vh;
+}
+
+.Totally.Hair.Book{
+    max-width: 6vh;
+    margin-left: 1vh;
+}
+
+.Hair.Dress {
+    width: 15vh;
+}
+
+.Hair.Necklace, .Hair.Headband {
+    margin-top: 1vh;
+}
+
+/* rapunzel */
+.outfitPic.Rapunzel {
+    width: 20vh;
+}
+/* fashionista sweetie */
+.accessoryPic.Sweetie {
+    width: 5vh;
+    margin-left: 1vh;
+}
+
+.accessoryPic.Sweetie.Bow.Heals  {
+    margin-top: 1vh;
+    width: 8vh;
+    margin-left: 0;
+}
+ .Sweetie.Necklace{
+    width: 7vh;
+    margin-top: 0vh;
+}
+
+.Sweetie.Purse {
+    margin-left: 2vh;
+}
+
+.outfitPic.Sweetie.Original {
+    margin-top: 26vh;
+}
+
+.Sweetie.Jacket {
+    width:17vh;
+}
+.Sweetie.Turtleneck, .Sweetie.Striped{
+    width: 13vh;
+}
+/* end accessory and outfit styling */
+
+.outfits::-webkit-scrollbar-track {
+    background-color: rgba(255, 0, 170, 0); 
+    border-radius: 10px;
+}
+.outfits::-webkit-scrollbar-thumb {
+    background-color: rgba(139, 23, 100, 0); 
+    border-radius: 10px; 
+}
+.outfits::-webkit-scrollbar {
+    width: 6px; 
+}
+.outfits::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 0, 170, 0);
+    width: 6px;
+}
+.accessory::-webkit-scrollbar-track {
+    background-color: rgba(255, 0, 170, 0); 
+    border-radius: 10px;
+}
+.accessory::-webkit-scrollbar-thumb {
+    background-color: rgba(139, 23, 100, 0); 
+    border-radius: 10px; 
+}
+.accessory::-webkit-scrollbar {
+    width: 6px; 
+}
+.accessory::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 0, 170, 0);
+    width: 6px;
 }
