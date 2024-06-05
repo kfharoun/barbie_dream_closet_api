@@ -75,13 +75,13 @@ h2 {
 .bubbleOutfit {
     left: 50vh;
     z-index: 2;
-    width: 20vh;
-    height: 20vh;
+    width: 15vh;
+    height: 15vh;
     background-color: #fef1f8;
     border-radius: 100vh;
     box-shadow: 0 5px #ffd0e6;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+    margin-top: vh;
+    margin-bottom: 5vh;
 }
 
 .outfitPic {
@@ -91,6 +91,33 @@ h2 {
     margin-bottom: 6vh;
 }
 
+#return {
+    background-color: #e74b95;
+    color: #fef1f8;
+    border: none;
+    padding: 1vh;
+    border-radius: 100px;
+    font-family: 'Bartex', sans-serif;
+    font-weight: bold;
+    font-size:medium;
+    text-shadow: 0 1px #fa98c7;
+    margin-left: 10vh;
+    margin-top: 3vh;
+    margin-bottom: 0;
+    box-shadow: 0 5px #ffd0e6;
+    z-index:0;
+    position: fixed;
+}
+
+
+#return:hover {
+    background-color: #e23e8b;
+}
+
+#return:active {
+    background-color: #e03183;
+    box-shadow: 0 2px #fdc3de;
+}
 
 
 
@@ -112,16 +139,17 @@ h2 {
 
 .outfits {
     position: fixed;
-    left: 40vh;
-    top: 50vh; 
+    left: 41vh;
+    top:51vh; 
     transform: translate(-50%, -50%); 
-    z-index: 3;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: auto;
     height: 60vh;
+    width: 60vh;
     /* display: none; */
 }
 
@@ -141,7 +169,7 @@ font-size: 2.9vh;
 .outfitText {
     position: fixed;
     margin-top: 15vh;
-    margin-left: 32.5vh;;
+    margin-left: 34vh;
 }
 /* individual outfit and accessory styling */
 
@@ -150,14 +178,19 @@ font-size: 2.9vh;
     padding-top: 0;
     margin-top: 0;
 }
-
+.outfitPic.Barbie.Generation.Girl.Skirt {
+    width: 15vh;
+    margin-top: 2vh;
+}
+.bubbleOutfit.Skirt {
+    margin-top: 40vh;
+    
+}
 .outfitPic.Barbie.Generation.Girl.Jacket {
     width: 20vh;
+    margin-top: 3vh;
 }
-.outfitPic.Barbie.Generation.Girl.Skirt {
-    width: 16vh;
-    margin-top:95vh;
-}
+
 .Malibu.Barbie.Shoes {
     max-width: 5vh;
     margin-left: 2vh;
@@ -170,7 +203,9 @@ font-size: 2.9vh;
     margin-top: 0;
     padding-top: 0;
 }
-
+.Tights, .Generation.Bodysuit, .Generation.Dress {
+    margin-left: 2vh;
+}
 .Generation.Boots {
     width: 7vh;
     margin-left: .5vh;
@@ -179,7 +214,23 @@ font-size: 2.9vh;
 .Malibu.Barbie.Sunglasses {
     padding-top: 2vh;
 }
-
+.Malibu.Top {
+    width: 13vh;
+    margin-left: 3vh;
+}
+.Malibu.Swimsuit {
+    width: 10vh;
+    margin-left: 4vh;
+}
+.bubbleOutfit.Malibu.Swimsuit{
+    width: 18vh;
+    height: 18vh;
+}
+.bubbleOutfit.Malibu.Top {
+    width: 18vh;
+    height: 18vh;
+    margin-top: 3vh;
+}
 /* dream date */
 
 .accessoryPic.Dream.Date.Barbie {
@@ -189,7 +240,18 @@ font-size: 2.9vh;
 .Date.Barbie.Brush, .Date.Barbie.Mirror {
     padding-top: 0;
 }
+.Date.Gown, .Date.Wrap {
+    width: 14vh;
+    margin-top: 0;
+    margin-left: 3vh
+}
+.bubbleOutfit.Date{
+    width: 20vh;
+    height: 20vh;
+    margin-bottom: 10vh;
+}
 /* totally hair */
+
 .accessoryPic.Totally.Hair {
     max-width: 8vh;
 }
@@ -203,6 +265,11 @@ font-size: 2.9vh;
     width: 15vh;
 }
 
+.bubbleOutfit.Hair.Dress{
+    height: 15vh;
+    width: 15vh;
+}
+
 .Hair.Necklace, .Hair.Headband {
     margin-top: 1vh;
 }
@@ -210,6 +277,14 @@ font-size: 2.9vh;
 /* rapunzel */
 .outfitPic.Rapunzel {
     width: 20vh;
+    margin-left: 2vh;
+}
+.Rapunzel.Gown {
+    margin-top: 2vh;
+}
+.bubbleOutfit.Rapunzel{
+    width: 23vh;
+    height: 23vh;
 }
 /* fashionista sweetie */
 .accessoryPic.Sweetie {
@@ -232,14 +307,26 @@ font-size: 2.9vh;
 }
 
 .outfitPic.Sweetie.Original {
-    margin-top: 26vh;
+    /* margin-top: 25vh; */
+    margin-left: 1vh;
 }
-
+.Sweetie.Halter {
+    margin-left: 2vh;
+}
 .Sweetie.Jacket {
     width:17vh;
 }
 .Sweetie.Turtleneck, .Sweetie.Striped{
     width: 13vh;
+    margin-left: 1vh;
+}
+.bubbleOutfit.Sweetie {
+    height: 15vh;
+    width: 15vh;
+}
+
+.bubbleOutfit.Sweetie.Original{
+    
 }
 /* end accessory and outfit styling */
 
