@@ -46,5 +46,16 @@ As a Barbie enthusiast, I want to be able to browse, manage, and customize my vi
 * tie up loose ends 
 
 
-# Questions 
-* since i want the function of deleting and adding clothes and accessories to certain barbies, should i not make barbie the parent?
+# Research
+* [how to clone images on click](https://www.w3schools.com/jsref/met_node_clonenode.asp)
+* used chatgpt to help me format my cloned variable 
+> code given 
+
+    const existingClones = document.querySelectorAll('.cloned-accessory');
+    const leftOffset = existingClones.length * 100; // Adjust 100 as needed
+    clone.style.left = `${leftOffset}px`; // Adjust px as needed
+
+    // Add a class to identify cloned elements
+    clone.classList.add('cloned-accessory');
+
+    document.body.appendChild(clone);

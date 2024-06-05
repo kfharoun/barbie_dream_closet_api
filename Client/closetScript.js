@@ -22,6 +22,9 @@ document.addEventListener('DOMContentLoaded', async () => {
             <img src="${outfit.image}" alt="(outfit.name)" class="outfitPic ${outfit.name}">
             </div>
             `
+            outfitContainer.addEventListener('click', function(){
+                removeOutfits(outfitContainer)
+            })
             outfitInfo.appendChild(outfitContainer)
         })
     }
@@ -40,23 +43,43 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     const removeAccessories = (accessoryContainer) => {
-        console.log(accessoryContainer.querySelector('img').alt)
-        accessoryContainer.style.display = 'none'
+        const clone = accessoryContainer.cloneNode(true)
+        const cloneDiv = document.createElement('div')
+        accessoryContainer.style.display = `none`
+    
+        clone.style.position = 'absolute'
+        clone.style.marginLeft = `120vh`
+        clone.style.top = `20vh`
+    
+        const existingClones = document.querySelectorAll('.cloned-accessory')
+        const leftOffset = existingClones.length * 100;
+        clone.style.left = `${leftOffset}px`
+    
+        clone.classList.add('cloned-accessory')
+    
+        cloneDiv.appendChild(clone)
+        
+        document.body.appendChild(cloneDiv)
+        
     }
     
+    
+    const removeOutfits = (outfitContainer)=> {
+        outfitContainer.style.display = `none`
+    }
     const displayAccessoriesById = (accessories) => {
         accessoryInfo.innerHTML = ''
         accessories.forEach(accessory => {
             const accessoryContainer = document.createElement('div')
             accessoryContainer.innerHTML = `
-                <div class="bubble ${accessory.name}">
+                <div class="bubble">
                     <img src="${accessory.image}" alt="${accessory.name}" class="accessoryPic ${accessory.name}">
                 </div>
             `
             accessoryContainer.addEventListener('click', function(){
-                removeAccessories(accessoryContainer);
+                removeAccessories(accessoryContainer)
             })
-            accessoryInfo.appendChild(accessoryContainer);
+            accessoryInfo.appendChild(accessoryContainer)
         })
     }
     
