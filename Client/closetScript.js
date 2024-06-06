@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const outfitContainer = document.createElement(`div`)
             outfitContainer.innerHTML=`
             <div class="bubbleOutfit ${outfit.name}">
-            <img src="${outfit.image}" alt="(outfit.name)" class="outfitPicFalse ${outfit.name}">
+            <img src="${outfit.image}" alt="(outfit.name)" class="outfitPic ${outfit.name}">
             </div>
             `
             outfitContainer.addEventListener('click', async function() {
@@ -28,12 +28,13 @@ document.addEventListener('DOMContentLoaded', async () => {
                     const outfitId = outfit._id
             
                     await axios.put(`http://localhost:3001/outfit/${outfitId}`, { inCollection: false })
-                    displayFalseAccessoriesById([outfit])
+                    displayFalseOutfitsById([outfit])
                     outfitContainer.style.display="none"
                     outfitContainerFalse.style.display="block"
                 } catch (error) {
                     console.error(`unable to update outfit status:`, error.message)
                 }
+                outfitInfo.classList.add(`${outfit.name}`)
             })
             outfitInfo.appendChild(outfitContainer)
         })
@@ -58,7 +59,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const outfitContainerFalse = document.createElement(`div`)
             outfitContainerFalse.innerHTML=`
             <div class="bubbleOutfitFalse">
-            <img src="${outfit.image}" alt="(outfit.name)" class="outfitPicFalse ${outfit.name}">
+            <img src="${outfit.image}" alt="(outfit.name)" class="outfitPicFalse ${outfit.name} ">
             </div>
             `
             outfitContainerFalse.addEventListener('click', async function() {
@@ -136,7 +137,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const accessoryContainer = document.createElement('div');
             accessoryContainer.innerHTML = `
                 <div class="bubble">
-                    <img src="${accessory.image}" alt="${accessory.name}" class="accessoryPic ${accessory.name}">
+                    <img src="${accessory.image}" alt="${accessory.name}" class="accessoryPic ${accessory.name}" ">
                 </div>
             `
             accessoryContainer.addEventListener('click', async function() {
@@ -180,7 +181,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (barbieData) {
                     const barbieDiv = document.querySelector('.barbie')
                     barbieDiv.innerHTML = `
-                        <img src="${barbieData.image}" alt="${barbieData.name}" class="productImage">
+                        <img src="${barbieData.image}" alt="${barbieData.name}" class="productImage" >
                     `
                 } else {
                     console.log(`Barbie not found`)

@@ -58,9 +58,9 @@ h2 {
     z-index: 3;
 }
 .accessoryWishText{
-    /* position: fixed; */
+    position: fixed;
     margin-left: 135vh;
-    padding-top: 15vh;
+    margin-top: 15vh;
 }
 .accessoryPic, .accessoryPicFalse {
     left: 50%;
@@ -75,8 +75,8 @@ h2 {
 .bubble {
     left: 50vh;
     z-index: 3;
-    width: 8vh;
-    height: 8vh;
+    width: 10vh;
+    height: 10vh;
     background-color: #fef1f8;
     z-index: 2;
     border-radius: 10vh;
@@ -113,21 +113,20 @@ h2 {
 .bubbleOutfitFalse {
     left: 50vh;
     z-index: 3;
-    width: 18vh;
-    height: 18vh;
+    width: 15vh;
+    height: 15vh;
     background-color: #fef1f8;
     z-index: 2;
     border-radius: 10vh;
     margin: 2vh;
     box-shadow: 0 5px #ffd0e6;
-    margin-bottom: 2vh;
+    margin-bottom: 5vh;
 }
 
 .outfitPic {
     z-index: 3;
     width: 10vh;
     height: auto;
-    margin-bottom: 6vh;
 }
 
 .outfitPicFalse {
@@ -164,13 +163,23 @@ h2 {
 
 .wishlistAccessories {
     display: flex;
-    margin-left: 130vh;
-    margin-top: 0vh;
+    margin-left: 150vh;
+    margin-top:21vh;
+    flex-direction: column;
+    overflow: auto;
+    height: 60vh;
+    width: 20vh;
+    position: fixed;
 }
 .wishlistOutfits {
     display: flex;
-    margin-left: 130vh;
-    margin-top: 5vh;
+    margin-left: 120vh;
+    margin-top: 21vh;
+    flex-direction: column;
+    position: fixed;
+    overflow: auto;
+    max-height: 60vh;
+    width: 25vh;
 }
 .accessory-container {
     position: absolute;
@@ -187,25 +196,21 @@ h2 {
     flex-direction: column;
     overflow: auto;
     height: 60vh;
+    width: 15vh;
     flex: 0 0 calc(33.33% - 20px);
 }
 
 
 
 .outfits {
-    position: fixed;
-    left: 41vh;
-    top:51vh; 
-    transform: translate(-50%, -50%); 
-    z-index: 2;
     display: flex;
+    margin-left: 33vh;
+    margin-top: 21vh;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    position: fixed;
     overflow: auto;
-    height: 60vh;
-    width: 60vh;
-    /* display: none; */
+    max-height: 60vh;
+    width: 25vh;
 }
 
 h1 {
@@ -238,7 +243,7 @@ font-size: 2.9vh;
     margin-top: 2vh;
 }
 .bubbleOutfit.Skirt {
-    margin-top: 40vh;
+    margin-top: 0vh;
     
 }
 .outfitPic.Barbie.Generation.Girl.Jacket {
@@ -254,16 +259,33 @@ font-size: 2.9vh;
     margin-bottom: 0;
     padding-bottom: 0;
 }
-.Boots {
-    margin-top: 0;
-    padding-top: 0;
-}
+
 .Tights, .Generation.Bodysuit, .Generation.Dress {
     margin-left: 2vh;
 }
-.Generation.Boots {
+.accessoryPic.Generation, .accessoryPicFalse.Generation {
     width: 7vh;
+    margin-left: 1vh;
+    margin-top: 1vh;
+}
+
+.Generation.Sunglasses, .Generation.Heals {
+    width: 9vh;
     margin-left: .5vh;
+    margin-top: 1vh;
+}
+
+.Generation.Boots {
+    margin-top: 0;
+}
+
+.outfitPicFalse.Generation.Jacket {
+    width: 20vh;
+    margin-top: 2vh;
+}
+.outfitPicFalse.Generation.Skirt {
+    width: 17vh;
+    margin-top: 1vh;
 }
 /* malibu barbie */
 .Malibu.Barbie.Sunglasses {
@@ -285,6 +307,9 @@ font-size: 2.9vh;
     width: 18vh;
     height: 18vh;
     margin-top: 3vh;
+}
+.bubbleOutfit.Generation {
+    margin-top: 2vh;
 }
 /* dream date */
 
@@ -324,6 +349,8 @@ font-size: 2.9vh;
 
 .Hair.Dress {
     width: 15vh;
+    margin-top: 1vh;
+    margin-left: 1vh;
 }
 
 .bubbleOutfit.Hair.Dress{
@@ -334,26 +361,33 @@ font-size: 2.9vh;
 .Hair.Necklace, .Hair.Headband {
     margin-top: 1vh;
 }
-
+.accessoryPicFalse.Hair{
+    margin-top: 2vh;
+    margin-left: 1vh;
+}
+.accessoryPicFalse.Hair.Book{
+    margin-top: 0;
+    margin-left: 2vh;
+}
 /* rapunzel */
-.outfitPic.Rapunzel {
+.outfitPic.Rapunzel, .outfitPicFalse.Rapunzel {
     width: 20vh;
     margin-left: 2vh;
 }
-.Rapunzel.Gown {
+.Rapunzel.Gown, .outfitPicFalse.Rapunzel.Gown {
     margin-top: 2vh;
 }
-.bubbleOutfit.Rapunzel{
+.Rapunzel, .Rapunzel{
     width: 23vh;
     height: 23vh;
 }
 /* fashionista sweetie */
-.accessoryPic.Sweetie {
+.accessoryPic.Sweetie, .accessoryPicFalse.Sweetie {
     width: 5vh;
     margin-left: 1vh;
 }
 
-.accessoryPic.Sweetie.Bow.Heals  {
+.accessoryPic.Sweetie.Bow.Heals, .accessoryPicFalse.Sweetie.Bow.Heals  {
     margin-top: 1vh;
     width: 8vh;
     margin-left: 0;
@@ -363,11 +397,11 @@ font-size: 2.9vh;
     margin-top: 0vh;
 }
 
-.Sweetie.Purse {
+.accessoryPic.Sweetie.Purse, .accessoryPicFalse.Sweetie.Purse {
     margin-left: 2vh;
 }
 
-.outfitPic.Sweetie.Original {
+.outfitPic.Sweetie.Original, .outfitPicFalse.Sweetie.Original{
     /* margin-top: 25vh; */
     margin-left: 1vh;
 }
@@ -381,7 +415,7 @@ font-size: 2.9vh;
     width: 13vh;
     margin-left: 1vh;
 }
-.bubbleOutfit.Sweetie {
+.bubbleOutfit.Sweetie, .bubbleOutfitFalse.Sweetie {
     height: 15vh;
     width: 15vh;
 }
@@ -418,4 +452,31 @@ font-size: 2.9vh;
 .accessory::-webkit-scrollbar-thumb:hover {
     background-color: rgba(255, 0, 170, 0);
     width: 6px;
+}
+
+.wishlistOutfits::-webkit-scrollbar-track {
+    background-color: rgba(255, 0, 170, 0); 
+    border-radius: 10px;
+}
+.wishlistOutfits::-webkit-scrollbar-thumb {
+    background-color: rgba(139, 23, 100, 0); 
+    border-radius: 10px; 
+}
+.wishlistOutfits::-webkit-scrollbar {
+    width: 6px; 
+}
+.wishlistOutfits::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 0, 170, 0);
+    width: 6px;
+}
+.wishlistAccessories::-webkit-scrollbar-track {
+    background-color: rgba(255, 0, 170, 0); 
+    border-radius: 10px;
+}
+.wishlistAccessories::-webkit-scrollbar-thumb {
+    background-color: rgba(139, 23, 100, 0); 
+    border-radius: 10px; 
+}
+.wishlistAccessories::-webkit-scrollbar {
+    width: 6px; 
 }
