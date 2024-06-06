@@ -211,6 +211,10 @@ text-shadow: 0 2px #ffd0e6;
 font-size: 2.9vh;
 }
 
+.closetText {
+    display: none;
+}
+
 .accessoryText {
     position: fixed;
     margin-top: 15vh;
@@ -477,3 +481,45 @@ font-size: 2.9vh;
     box-shadow: 0 2px #ffd0e6;
 }
 
+@media screen and (max-width: 1200px) {
+    .accessory {
+        margin-left: 10vh;
+    }
+    .outfits {
+        margin-left: 13.99vh;
+        margin-top: 18.99vh;
+    }
+    .bubbleOutfit {
+        width: 13vh;
+        height: 13vh;
+    }
+    .accessoryText {
+        margin-left: 1vh;
+    }
+    .closetText {
+        display: block;
+        position: fixed;
+        margin-top: 14vh;
+        margin-left: 9vh;
+        font-size: 4vh;
+    }
+    .accessoryText, .outfitText {
+        display: none;
+    }
+    
+    .wishlistAccessories {
+        margin-left: 90vh;
+    }
+    .wishlistOutfits {
+        margin-left: 70vh;
+    }
+    .bubbleOutfitFalse {
+        width: 10vh;
+        height: 10vh;
+    }
+    .outfitPicFalse.Malibu {
+        width: 8vh;
+        margin-left: 1vh;
+    }
+    
+}

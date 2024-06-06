@@ -202,11 +202,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     getTrueOutfitsById()
     getFalseAccessoriesById()
     getFalseOutfitsById()
-    document.addEventListener('mousemove', (e) => {
-        const customCursor = document.querySelector('.cuteCursor');
-        customCursor.style.left = `${e.clientX}px`;
-        customCursor.style.top = `${e.clientY}px`;
-      })
+    
 })
 
 
