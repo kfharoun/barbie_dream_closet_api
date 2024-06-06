@@ -5,15 +5,7 @@ body {
     height: 100vh;
 }
 
-.cuteCursor {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    background-image: url('/images/mouse.png'); 
-    background-size: contain;
-    pointer-events: none; 
-    z-index: 4;
-  }
+
 .barbie {
     left: 33%;
     z-index: 3;
@@ -371,15 +363,14 @@ font-size: 2.9vh;
 }
 /* rapunzel */
 .outfitPic.Rapunzel, .outfitPicFalse.Rapunzel {
-    width: 20vh;
-    margin-left: 2vh;
+    width: 18vh;
+    margin-left: 0;
 }
-.Rapunzel.Gown, .outfitPicFalse.Rapunzel.Gown {
+.outfitPicTrue.Rapunzel.Gown, .outfitPicFalse.Rapunzel.Gown {
     margin-top: 2vh;
 }
-.Rapunzel, .Rapunzel{
+.accessoryPic.Rapunzel, .accessoryPicFalse.Rapunzel{
     width: 23vh;
-    height: 23vh;
 }
 /* fashionista sweetie */
 .accessoryPic.Sweetie, .accessoryPicFalse.Sweetie {
@@ -480,3 +471,9 @@ font-size: 2.9vh;
 .wishlistAccessories::-webkit-scrollbar {
     width: 6px; 
 }
+
+
+.bubble:active, .bubbleFalse:active, .bubbleOutfit:active, .bubbleOutfitFalse:active {
+    box-shadow: 0 2px #ffd0e6;
+}
+

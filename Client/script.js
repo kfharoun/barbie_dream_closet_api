@@ -55,6 +55,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const popupClose = document.getElementById(`closeDesc`)
     popupClose.addEventListener(`click`, function(){
-    document.querySelector(`.barbieDesc`).style.display=`none`
-})
+        document.querySelector(`.barbieDesc`).style.display=`none`
+    })
+
+    
+    const welcomeClose = document.getElementsByClassName(`gradient-text`)[0]
+    welcomeClose.addEventListener(`click`, function(){
+        const welcomeMessage = document.querySelector(`.welcome`)
+        welcomeMessage.classList.add('fade-out')
+        setTimeout(() => {
+            document.querySelector(`.welcome`).style.display = 'none'
+            window.location.href = 'home.html'
+        }, 1000)
+    })
 })

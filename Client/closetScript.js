@@ -134,31 +134,34 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const displayTrueAccessoriesById = (accessories) => {
         accessories.forEach(accessory => {
-            const accessoryContainer = document.createElement('div');
+            const accessoryContainer = document.createElement('div')
             accessoryContainer.innerHTML = `
                 <div class="bubble">
-                    <img src="${accessory.image}" alt="${accessory.name}" class="accessoryPic ${accessory.name}" ">
+                    <img src="${accessory.image}" alt="${accessory.name}" class="accessoryPic ${accessory.name}">
                 </div>
             `
+    
             accessoryContainer.addEventListener('click', async function() {
                 try {
                     const accessoryId = accessory._id
-            
+    
                     await axios.put(`http://localhost:3001/accessory/${accessoryId}`, { inCollection: false })
+    
                     displayFalseAccessoriesById([accessory])
-                    accessoryContainer.style.display="none"
-                    accessoryContainerFalse.style.display="block"
+                    accessoryContainer.style.display = "none"
+                    accessoryContainerFalse.style.display = "block"
                 } catch (error) {
                     console.error(`unable to update accessory status:`, error.message)
                 }
             })
+    
             accessoryInfo.appendChild(accessoryContainer)
         })
     }
 
     const getTrueAccessoriesById = async (barbieId) => {
         try {
-            const barbieUrl = new URLSearchParams(window.location.search);
+            const barbieUrl = new URLSearchParams(window.location.search)
             const barbieId = barbieUrl.get('id')
             const response = await fetch(`http://localhost:3001/accessory/barbie/${barbieId}`)
             const accessoryData = await response.json()
