@@ -6,6 +6,7 @@ const OutfitSchema = new Schema(
     type: { type: String, required: true },
     color: {type: String, required: true},
     image: { type: String, required: true },
+    inCollection: { type: Boolean, required: true },
     barbieId: { type: Schema.Types.ObjectId, ref: 'Barbie'}
   },
   { timestamps: true }

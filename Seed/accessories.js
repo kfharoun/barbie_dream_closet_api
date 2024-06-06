@@ -31,28 +31,33 @@ const main = async () => {
         name: "Malibu Barbie Sunglasses",
         type: "Glasses",
         color: "Blue",
-        image: "../images/malibuGlasses.png",
+        image: "../images/malibuGlasses.png", 
+        inCollection: true,
         barbieId: malibu._id
     },
     {
         name: "Malibu Barbie Shoes",
         type: "Shoes",
         color: "Yellow",
-        image: "../images/malibuShoes.png",
+        image: "../images/malibuShoes.png", 
+        inCollection: true,
         barbieId: malibu._id
     },
     {
         name: "Malibu Barbie Book",
         type: "Hand",
         color: "Pink",
-        image: "../images/malibuBook.png",
+        image: "../images/malibuBook.png", 
+        inCollection: true,
+        inCollection: true,
         barbieId: malibu._id
     },
     {
         name: "Malibu Barbie Towel",
         type: "Hand",
         color: "Yellow",
-        image: "../images/malibuTowel.png",
+        image: "../images/malibuTowel.png", 
+        inCollection: true,
         barbieId: malibu._id
     },
     // dream date barbie
@@ -61,21 +66,24 @@ const main = async () => {
         name: "Dream Date Barbie Shoes",
         type: "Shoes",
         color: "Pink",
-        image: "../images/dreamShoes.png",
+        image: "../images/dreamShoes.png", 
+        inCollection: true,
         barbieId: dreamDate._id
     },
     {
         name: "Dream Date Barbie Mirror",
         type: "Hand",
         color: "Purple",
-        image: "../images/dreamMirror.png",
+        image: "../images/dreamMirror.png", 
+        inCollection: true,
         barbieId: dreamDate._id
     },
     {
         name: "Dream Date Barbie Brush",
         type: "Hair",
         color: "Purple",
-        image: "../images/dreamBrush.png",
+        image: "../images/dreamBrush.png", 
+        inCollection: true,
         barbieId: dreamDate._id
     },
     // totally hair 
@@ -83,49 +91,56 @@ const main = async () => {
         name: "Totally Hair Barbie Haircomb",
         type: "Hair",
         color: "Pink",
-        image: "../images/hairComb.png",
+        image: "../images/hairComb.png", 
+        inCollection: true,
         barbieId: totallyHair._id
     },
     {
         name: "Totally Hair Barbie Book",
         type: "Hand",
         color: "Pink",
-        image: "../images/hairBook.png",
+        image: "../images/hairBook.png", 
+        inCollection: true, 
         barbieId: totallyHair._id
     },
     {
         name: "Totally Hair Barbie Headband",
         type: "Head",
         color: "Pink",
-        image: "../images/hairHeadband.png",
+        image: "../images/hairHeadband.png", 
+        inCollection: true,
         barbieId: totallyHair._id
     },
     {
         name: "Totally Hair Barbie Necklace",
         type: "Necklace",
         color: "Pink",
-        image: "../images/hairNecklace.png",
+        image: "../images/hairNecklace.png", 
+        inCollection: true,
         barbieId: totallyHair._id
     },
     {
         name: "Totally Hair Barbie Scrunchie",
         type: "Hair",
         color: "Purple",
-        image: "../images/hairScrunchie.png",
+        image: "../images/hairScrunchie.png", 
+        inCollection: true,
         barbieId: totallyHair._id
     },
     {
         name: "Totally Hair Barbie Scrunchie",
         type: "Hair",
         color: "Pink",
-        image: "../images/hairScrunchiePink.png",
+        image: "../images/hairScrunchiePink.png", 
+        inCollection: true,
         barbieId: totallyHair._id
     },
     {
         name: "Totally Hair Barbie Shoes",
         type: "Shoes",
         color: "Pink",
-        image: "../images/hairShoes.png",
+        image: "../images/hairShoes.png", 
+        inCollection: true,
         barbieId: totallyHair._id
     },
     // generation girl
@@ -133,77 +148,88 @@ const main = async () => {
         name: "Barbie Generation Girl Bag",
         type: "Hand",
         color: "Red",
-        image: "../images/genBag.png",
+        image: "../images/genBag.png", 
+        inCollection: true,
         barbieId: generationGirl._id
     },
     {
         name: "Barbie Generation Girl Sunglasses",
         type: "Glasses",
         color: "Blue",
-        image: "../images/genGlasses.png",
+        image: "../images/genGlasses.png", 
+        inCollection: true,
         barbieId: generationGirl._id
     },
     {
         name: "Barbie Generation Girl Film Slate",
         type: "Hand",
         color: "Silver",
-        image: "../images/genSlate.png",
+        image: "../images/genSlate.png", 
+        inCollection: true,
         barbieId: generationGirl._id
     },
     {
         name: "Barbie Generation Girl Heals",
         type: "Shoes",
         color: "Red",
-        image: "../images/genHeals.png",
+        image: "../images/genHeals.png", 
+        inCollection: true,
         barbieId: generationGirl._id
     }, 
     {
         name: "Barbie Generation Girl Video Tape",
         type: "Hand",
         color: "Yellow",
-        image: "../images/genTape.png",
+        image: "../images/genTape.png", 
+        inCollection: true,
         barbieId: generationGirl._id
     }, 
     {
         name: "Barbie Generation Girl Video Tape",
         type: "Hand",
         color: "Yellow",
-        image: "../images/genTapeSilver.png",
+        image: "../images/genTapeSilver.png", 
+        inCollection: true,
         barbieId: generationGirl._id
     }, 
     {
         name: "Barbie Generation Girl Magazine",
         type: "Hand",
         color: "White",
-        image: "../images/genMagazine.png",
+        image: "../images/genMagazine.png", 
+        inCollection: true,
         barbieId: generationGirl._id
     },
     {
         name: "Barbie Generation Girl Camera",
         type: "Hand",
         color: "Silver",
-        image: "../images/genCamera.png",
+        image: "../images/genCamera.png", 
+        inCollection: true,
         barbieId: generationGirl._id
     },
     {
         name: "Barbie Generation Girl Cell Phone",
         type: "Hand",
         color: "Black",
-        image: "../images/genPhone.png",
+        image: "../images/genPhone.png", 
+        inCollection: true,
         barbieId: generationGirl._id
     },
     {
         name: "Barbie Generation Girl Necklace",
         type: "Necklace",
         color: "Blue",
-        image: "../images/genNecklace.png",
+        image: "../images/genNecklace.png", 
+        inCollection: true,
         barbieId: generationGirl._id
     },
     {
         name: "Barbie Generation Girl Boots",
         type: "Shoes",
         color: "Blue",
-        image: "../images/genBoots.png",
+        image: "../images/genBoots.png", 
+        inCollection: true,
         barbieId: generationGirl._id
     },
     // barbie as rapunzel
@@ -211,42 +237,48 @@ const main = async () => {
         name: "Barbie as Rapunzel Tiara",
         type: "Hair",
         color: "Gold",
-        image: "../images/rapunzelCrown.png",
+        image: "../images/rapunzelCrown.png", 
+        inCollection: true,
         barbieId: rapunzel._id
     },
     {
         name: "Barbie as Rapunzel Musical Brush",
         type: "Hair",
         color: "Pink",
-        image: "../images/rapunzelBrush.png",
+        image: "../images/rapunzelBrush.png", 
+        inCollection: true,
         barbieId: rapunzel._id
     },
     {
         name: "Barbie as Rapunzel Ballet Slippers",
         type: "Shoes",
         color: "Pink",
-        image: "../images/rapunzelShoes.png",
+        image: "../images/rapunzelShoes.png", 
+        inCollection: true,
         barbieId: rapunzel._id
     },
     {
         name: "Barbie as Rapunzel Ballet Slippers",
         type: "Shoes",
         color: "Purple",
-        image: "../images/rapunzelShoesPurple.png",
+        image: "../images/rapunzelShoesPurple.png", 
+        inCollection: true,
         barbieId: rapunzel._id
     },
     {
         name: "Barbie as Rapunzel Heals",
         type: "Shoes",
         color: "Pink",
-        image: "../images/rapunzelHeals.png",
+        image: "../images/rapunzelHeals.png", 
+        inCollection: true,
         barbieId: rapunzel._id
     },
     {
         name: "Barbie as Rapunzel Mask",
         type: "Hand",
         color: "Gold",
-        image: "../images/rapunzelMask.png",
+        image: "../images/rapunzelMask.png", 
+        inCollection: true,
         barbieId: rapunzel._id
     },
     // fashionista sweetie
@@ -254,63 +286,72 @@ const main = async () => {
         name: "Fashionistas Sweetie Purse",
         type: "Hand",
         color: "Pink",
-        image: "../images/sweetiePurse.png",
+        image: "../images/sweetiePurse.png", 
+        inCollection: true,
         barbieId: fashionistaSweetie._id
     },
     {
         name: "Fashionistas Sweetie Heart Purse",
         type: "Hand",
         color: "Pink",
-        image: "../images/sweetieHeart.png",
+        image: "../images/sweetieHeart.png", 
+        inCollection: true,
         barbieId: fashionistaSweetie._id
     },
     {
         name: "Fashionistas Sweetie Phone",
         type: "Hand",
         color: "Pink",
-        image: "../images/sweetiePhone.png",
+        image: "../images/sweetiePhone.png", 
+        inCollection: true,
         barbieId: fashionistaSweetie._id
     },
     {
         name: "Fashionistas Sweetie Necklace",
         type: "Necklace",
         color: "Pink",
-        image: "../images/sweetiePinkNecklace.png",
+        image: "../images/sweetiePinkNecklace.png", 
+        inCollection: true,
         barbieId: fashionistaSweetie._id
     },
     {
         name: "Fashionistas Sweetie Heals",
         type: "Shoes",
         color: "Gold",
-        image: "../images/sweetieGold.png",
+        image: "../images/sweetieGold.png", 
+        inCollection: true,
         barbieId: fashionistaSweetie._id
     },
     {
         name: "Fashionistas Sweetie Bow Heals",
         type: "Shoes",
         color: "Blue",
-        image: "../images/sweetieBlue.png",
+        image: "../images/sweetieBlue.png", 
+        inCollection: true,
         barbieId: fashionistaSweetie._id
     },
     {
         name: "Fashionistas Sweetie Bow Heals",
         type: "Shoes",
         color: "Pink",
-        image: "../images/sweetiePink.png",
+        image: "../images/sweetiePink.png", 
+        inCollection: true,
         barbieId: fashionistaSweetie._id
     },
     {
         name: "Fashionistas Sweetie Purse",
         type: "Hand",
         color: "Green",
-        image: "../images/sweetieGreenPurse.png",
+        image: "../images/sweetieGreenPurse.png", 
+        inCollection: true,
         barbieId: fashionistaSweetie._id
     },
     {
         name: "Fashionistas Sweetie Bow Necklace",
         type: "Necklace",
         color: "Pink",
-        image: "../images/sweetieBowNecklace.png",
+        image: "../images/sweetieBowNecklace.png", 
+        inCollection: true,
         barbieId: fashionistaSweetie._id
     }
   ]

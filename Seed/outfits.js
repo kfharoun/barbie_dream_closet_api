@@ -30,13 +30,15 @@ const main = async () => {
         type: "Top",
         color: "Assorted",
         image: "../images/malibuSuit.png",
+        inCollection: true,
         barbieId: malibu._id
     },
     {
         name: "Malibu Barbie Yellow Top and Pant Set",
         type: "Dress",
         color: "Yellow",
-        image: "../images/malibuYellow.png",
+        image: "../images/malibuYellow.png", 
+        inCollection: true,
         barbieId: malibu._id
     },
      
@@ -45,14 +47,16 @@ const main = async () => {
         name: "Dream Date Barbie Evening Gown",
         type: "Dress",
         color: "Purple",
-        image: "../images/dreamDress.png",
+        image: "../images/dreamDress.png", 
+        inCollection: true,
         barbieId: dreamDate._id
     },
     {
         name: "Dream Date Barbie Wrap",
         type: "Bottoms",
         color: "Pink",
-        image: "../images/dreamSkirt.png",
+        image: "../images/dreamSkirt.png", 
+        inCollection: true,
         barbieId: dreamDate._id
     },
     // totally hair
@@ -60,7 +64,8 @@ const main = async () => {
         name: "Totally Hair Barbie Dress",
         type: "Dress",
         color: "Pink",
-        image: "../images/totallyDress.png",
+        image: "../images/totallyDress.png", 
+        inCollection: true,
         barbieId: totallyHair._id
     },
  
@@ -69,35 +74,40 @@ const main = async () => {
         name: "Barbie Generation Girl Skirt",
         type: "Bottoms",
         color: "Blue",
-        image: "../images/genSkirt.png",
+        image: "../images/genSkirt.png", 
+        inCollection: true,
         barbieId: generationGirl._id
     },
     {
         name: "Barbie Generation Girl Jacket",
         type: "Top",
         color: "Blue",
-        image: "../images/genJacket.png",
+        image: "../images/genJacket.png", 
+        inCollection: true,
         barbieId: generationGirl._id
     },
     {
         name: "Barbie Generation Girl Tights",
         type: "Bottoms",
         color: "Blue",
-        image: "../images/genTights.png",
+        image: "../images/genTights.png", 
+        inCollection: true,
         barbieId: generationGirl._id
     },
     {
         name: "Barbie Generation Girl Bodysuit",
         type: "Top",
         color: "Red",
-        image: "../images/genBody.png",
+        image: "../images/genBody.png", 
+        inCollection: true,
         barbieId: generationGirl._id
     },
     {
         name: "Barbie Generation Girl Dress",
         type: "Dress",
         color: "Blue",
-        image: "../images/genDress.png",
+        image: "../images/genDress.png", 
+        inCollection: true,
         barbieId: generationGirl._id
     },
     // barbie as rapunzel
@@ -105,14 +115,16 @@ const main = async () => {
         name: "Barbie as Rapunzel Gown",
         type: "Dress",
         color: "Assorted",
-        image: "../images/rapunzelDress.png",
+        image: "../images/rapunzelDress.png", 
+        inCollection: true,
         barbieId: rapunzel._id
     },
     {
         name: "Barbie as Rapunzel Cape",
         type: "Top",
         color: "Assorted",
-        image: "../images/rapunzelCape.png",
+        image: "../images/rapunzelCape.png", 
+        inCollection: true,
         barbieId: rapunzel._id
     },
  
@@ -121,35 +133,40 @@ const main = async () => {
         name: "Fashionistas Sweetie Original Dress",
         type: "Dress",
         color: "Pink",
-        image: "../images/sweetieDress.png",
+        image: "../images/sweetieDress.png", 
+        inCollection: true,
         barbieId: fashionistaSweetie._id
     },
     {
         name: "Fashionistas Sweetie Halter Dress",
         type: "Dress",
         color: "Pink",
-        image: "../images/sweetieHalter.png",
+        image: "../images/sweetieHalter.png", 
+        inCollection: true,
         barbieId: fashionistaSweetie._id
     },
     {
         name: "Fashionistas Sweetie Striped Dress",
         type: "Dress",
         color: "Pink",
-        image: "../images/sweetieDressStripe.png",
+        image: "../images/sweetieDressStripe.png", 
+        inCollection: true,
         barbieId: fashionistaSweetie._id
     },
     {
         name: "Fashionistas Sweetie Turtleneck Dress",
         type: "Dress",
         color: "Pink",
-        image: "../images/sweetiePinkDress.png",
+        image: "../images/sweetiePinkDress.png", 
+        inCollection: true,
         barbieId: fashionistaSweetie._id
     },
     {
         name: "Fashionistas Sweetie Jacket",
         type: "Top",
         color: "Purple",
-        image: "../images/sweetieJacket.png",
+        image: "../images/sweetieJacket.png", 
+        inCollection: true,
         barbieId: fashionistaSweetie._id
     }
   ]

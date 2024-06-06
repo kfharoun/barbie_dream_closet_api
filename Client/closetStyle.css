@@ -48,7 +48,7 @@ h2 {
     z-index: 3;
 }
 
-.accessoryPic {
+.accessoryPic, .accessoryPicFalse {
     left: 50%;
     z-index: 3;
     width: 8vh;
@@ -70,6 +70,18 @@ h2 {
     box-shadow: 0 5px #ffd0e6;
     margin-bottom: 2vh;
     
+}
+.bubbleFalse {
+    left: 50vh;
+    z-index: 3;
+    width: 8vh;
+    height: 8vh;
+    background-color: #fef1f8;
+    z-index: 2;
+    border-radius: 10vh;
+    margin-top: 2vh;
+    box-shadow: 0 5px #ffd0e6;
+    margin-bottom: 2vh;
 }
 
 .bubbleOutfit {

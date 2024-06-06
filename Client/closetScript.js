@@ -2,6 +2,8 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const accessoryInfo = document.querySelector('.accessory')
     const outfitInfo = document.querySelector(`.outfits`)
+    const wishlistAccessories = document.querySelector(`.wishlistAccessories`)
+    const wishlistOutfit = document.querySelector(`.wishlistOutfit`)
 
     const getBarbieById = async (barbieId) => {
         try {
@@ -40,61 +42,84 @@ document.addEventListener('DOMContentLoaded', async () => {
         console.log(`error fetching outfits by ID:`, error.message)
         return null
         }
+    }    
+    
+
+    const displayFalseAccessoriesById = (accessories) => {
+        wishlistAccessories.innerHTML = '';
+        accessories.forEach(accessory => {
+            const accessoryContainerFalse = document.createElement('div');
+            accessoryContainerFalse.innerHTML = `
+                <div class="bubbleFalse">
+                    <img src="${accessory.image}" alt="${accessory.name}" class="accessoryPicFalse ${accessory.name}">
+                </div>
+            `;
+            accessoryContainerFalse.addEventListener('click', async function() {
+                try {
+                    const accessoryId = accessory._id
+
+                    await axios.put(`http://localhost:3001/accessory/${accessoryId}`, { inCollection: true })
+    
+                    displayTrueAccessoriesById([accessory])
+    
+                    accessoryContainerFalse.remove()
+                    
+                } catch (error) {
+                    console.error(`Error updating accessory status:`, error.message)
+                }
+            })
+            wishlistAccessories.appendChild(accessoryContainerFalse)
+        })
     }
 
-    const removeAccessories = (accessoryContainer) => {
-        const clone = accessoryContainer.cloneNode(true)
-        const cloneDiv = document.createElement('div')
-        accessoryContainer.style.display = `none`
-    
-        clone.style.position = 'absolute'
-        clone.style.marginLeft = `120vh`
-        clone.style.top = `20vh`
-    
-        const existingClones = document.querySelectorAll('.cloned-accessory')
-        const leftOffset = existingClones.length * 100;
-        clone.style.left = `${leftOffset}px`
-    
-        clone.classList.add('cloned-accessory')
-    
-        cloneDiv.appendChild(clone)
-        
-        document.body.appendChild(cloneDiv)
-        
+    const getFalseAccessoriesById = async (barbieId) => {
+        try {
+            const barbieUrl = new URLSearchParams(window.location.search);
+            const barbieId = barbieUrl.get('id')
+            const response = await fetch(`http://localhost:3001/accessory/barbie/${barbieId}`)
+            const accessoryData = await response.json()
+            const trueAccessories = accessoryData.filter(accessory => !accessory.inCollection)
+            
+            displayFalseAccessoriesById(trueAccessories)
+        } catch (error) {
+            console.error(`Can't find accessories for Barbie:`, error.message)
+            return null
+        }
     }
-    
-    
-    const removeOutfits = (outfitContainer)=> {
-        outfitContainer.style.display = `none`
-    }
-    const displayAccessoriesById = (accessories) => {
+
+    const displayTrueAccessoriesById = (accessories) => {
         accessoryInfo.innerHTML = ''
         accessories.forEach(accessory => {
-            const accessoryContainer = document.createElement('div')
+            const accessoryContainer = document.createElement('div');
             accessoryContainer.innerHTML = `
                 <div class="bubble">
                     <img src="${accessory.image}" alt="${accessory.name}" class="accessoryPic ${accessory.name}">
                 </div>
             `
-            accessoryContainer.addEventListener('click', function(){
-                removeAccessories(accessoryContainer)
+            accessoryContainer.addEventListener('click', async function() {
+                try {
+                    const accessoryId = accessory._id
+            
+                    await axios.put(`http://localhost:3001/accessory/${accessoryId}`, { inCollection: false })
+                    displayFalseAccessoriesById([accessory])
+                    accessoryContainer.remove()
+                } catch (error) {
+                    console.error(`unable to update accessory status:`, error.message);
+                }
             })
             accessoryInfo.appendChild(accessoryContainer)
         })
     }
-    
 
-    const getAccessoriesById = async (barbieId) => {
+    const getTrueAccessoriesById = async (barbieId) => {
         try {
-            const barbieUrl = new URLSearchParams(window.location.search)
-            // console.log("barbieURL:", barbieUrl)
+            const barbieUrl = new URLSearchParams(window.location.search);
             const barbieId = barbieUrl.get('id')
-            // console.log("barbieId:", barbieId)
             const response = await fetch(`http://localhost:3001/accessory/barbie/${barbieId}`)
-            // console.log("response:", response)
             const accessoryData = await response.json()
-            // console.log("accessoryData:", accessoryData)
-            displayAccessoriesById(accessoryData)
+            const trueAccessories = accessoryData.filter(accessory => accessory.inCollection)
+            
+            displayTrueAccessoriesById(trueAccessories)
         } catch (error) {
             console.error(`Can't find accessories for Barbie:`, error.message)
             return null
@@ -125,9 +150,36 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     displayBarbieById()
-    getAccessoriesById()
+    getTrueAccessoriesById()
     getOutfitsById()
+    getFalseAccessoriesById()
   
 })
 
 
+// code graveyard
+
+// const removeOutfits = (outfitContainer)=> {
+    //     outfitContainer.style.display = `none`
+    // }
+
+    // const removeAccessories = (accessoryContainer) => {
+    //     const clone = accessoryContainer.cloneNode(true)
+    //     const cloneDiv = document.createElement('div')
+    //     accessoryContainer.style.display = `none`
+    
+    //     clone.style.position = 'absolute'
+    //     clone.style.marginLeft = `120vh`
+    //     clone.style.top = `20vh`
+    
+    //     const existingClones = document.querySelectorAll('.cloned-accessory')
+    //     const leftOffset = existingClones.length * 100;
+    //     clone.style.left = `${leftOffset}px`
+    
+    //     clone.classList.add('cloned-accessory')
+    
+    //     cloneDiv.appendChild(clone)
+        
+    //     document.body.appendChild(cloneDiv)
+        
+    // }
