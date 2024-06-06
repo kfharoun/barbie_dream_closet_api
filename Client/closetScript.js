@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     const accessoryInfo = document.querySelector('.accessory')
     const outfitInfo = document.querySelector(`.outfits`)
     const wishlistAccessories = document.querySelector(`.wishlistAccessories`)
-    const wishlistOutfit = document.querySelector(`.wishlistOutfit`)
+    const wishlistOutfit = document.querySelector(`.wishlistOutfits`)
 
     const getBarbieById = async (barbieId) => {
         try {
@@ -15,45 +15,90 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
-    const displayOutfitsById = (outfits) => {
-        outfitInfo.innerHTML = ``
+    const displayTrueOutfitsById = (outfits) => {
         outfits.forEach(outfit => {
             const outfitContainer = document.createElement(`div`)
             outfitContainer.innerHTML=`
             <div class="bubbleOutfit ${outfit.name}">
-            <img src="${outfit.image}" alt="(outfit.name)" class="outfitPic ${outfit.name}">
+            <img src="${outfit.image}" alt="(outfit.name)" class="outfitPicFalse ${outfit.name}">
             </div>
             `
-            outfitContainer.addEventListener('click', function(){
-                removeOutfits(outfitContainer)
+            outfitContainer.addEventListener('click', async function() {
+                try {
+                    const outfitId = outfit._id
+            
+                    await axios.put(`http://localhost:3001/outfit/${outfitId}`, { inCollection: false })
+                    displayFalseAccessoriesById([outfit])
+                    outfitContainer.style.display="none"
+                    outfitContainerFalse.style.display="block"
+                } catch (error) {
+                    console.error(`unable to update outfit status:`, error.message)
+                }
             })
             outfitInfo.appendChild(outfitContainer)
         })
     }
 
-    const getOutfitsById = async (barbieId) => {
+    const getTrueOutfitsById = async (barbieId) => {
         try {
         const barbieUrl = new URLSearchParams(window.location.search)
         barbieId = barbieUrl.get(`id`)
         const response = await fetch (`http://localhost:3001/outfit/barbie/${barbieId}`)
         const outfitData = await response.json()
-        displayOutfitsById(outfitData)
+        const trueOutfits = outfitData.filter(outfit => outfit.inCollection)
+        displayTrueOutfitsById(trueOutfits)
     } catch (error) {
         console.log(`error fetching outfits by ID:`, error.message)
         return null
         }
     }    
     
+    const displayFalseOutfitsById = (outfits) => {
+        outfits.forEach(outfit => {
+            const outfitContainerFalse = document.createElement(`div`)
+            outfitContainerFalse.innerHTML=`
+            <div class="bubbleOutfitFalse">
+            <img src="${outfit.image}" alt="(outfit.name)" class="outfitPicFalse ${outfit.name}">
+            </div>
+            `
+            outfitContainerFalse.addEventListener('click', async function() {
+                try {
+                    const outfitId = outfit._id
+
+                    await axios.put(`http://localhost:3001/outfit/${outfitId}`, { inCollection: true })
+                    displayTrueOutfitsById([outfit])
+                    outfitContainerFalse.style.display="none"
+                    outfitContainer.style.display="block"
+                } catch (error) {
+                    console.error(`Error updating outfit status:`, error.message)
+                }
+            })
+            wishlistOutfit.appendChild(outfitContainerFalse)
+        })
+    }
+
+    const getFalseOutfitsById = async (barbieId) => {
+        try {
+        const barbieUrl = new URLSearchParams(window.location.search)
+        barbieId = barbieUrl.get(`id`)
+        const response = await fetch (`http://localhost:3001/outfit/barbie/${barbieId}`)
+        const outfitData = await response.json()
+        const falseOutfits = outfitData.filter(outfit => !outfit.inCollection)
+        displayFalseOutfitsById(falseOutfits)
+    } catch (error) {
+        console.log(`error fetching outfits by ID:`, error.message)
+        return null
+        }
+    }   
 
     const displayFalseAccessoriesById = (accessories) => {
-        wishlistAccessories.innerHTML = '';
         accessories.forEach(accessory => {
             const accessoryContainerFalse = document.createElement('div');
             accessoryContainerFalse.innerHTML = `
                 <div class="bubbleFalse">
                     <img src="${accessory.image}" alt="${accessory.name}" class="accessoryPicFalse ${accessory.name}">
                 </div>
-            `;
+            `
             accessoryContainerFalse.addEventListener('click', async function() {
                 try {
                     const accessoryId = accessory._id
@@ -61,9 +106,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                     await axios.put(`http://localhost:3001/accessory/${accessoryId}`, { inCollection: true })
     
                     displayTrueAccessoriesById([accessory])
-    
-                    accessoryContainerFalse.remove()
-                    
+                    accessoryContainerFalse.style.display="none"
+                    accessoryContainer.style.display="block"
                 } catch (error) {
                     console.error(`Error updating accessory status:`, error.message)
                 }
@@ -88,7 +132,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     const displayTrueAccessoriesById = (accessories) => {
-        accessoryInfo.innerHTML = ''
         accessories.forEach(accessory => {
             const accessoryContainer = document.createElement('div');
             accessoryContainer.innerHTML = `
@@ -102,9 +145,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             
                     await axios.put(`http://localhost:3001/accessory/${accessoryId}`, { inCollection: false })
                     displayFalseAccessoriesById([accessory])
-                    accessoryContainer.remove()
+                    accessoryContainer.style.display="none"
+                    accessoryContainerFalse.style.display="block"
                 } catch (error) {
-                    console.error(`unable to update accessory status:`, error.message);
+                    console.error(`unable to update accessory status:`, error.message)
                 }
             })
             accessoryInfo.appendChild(accessoryContainer)
@@ -151,9 +195,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     displayBarbieById()
     getTrueAccessoriesById()
-    getOutfitsById()
+    getTrueOutfitsById()
     getFalseAccessoriesById()
-  
+    getFalseOutfitsById()
+    document.addEventListener('mousemove', (e) => {
+        const customCursor = document.querySelector('.cuteCursor');
+        customCursor.style.left = `${e.clientX}px`;
+        customCursor.style.top = `${e.clientY}px`;
+      })
 })
 
 
