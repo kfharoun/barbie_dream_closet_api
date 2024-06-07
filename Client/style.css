@@ -98,19 +98,19 @@ img {
     display: none;
 }
 
-/* #closeWelc {
+#closeWelc {
     position: fixed;
-    z-index: 5;
+    z-index: 7;
     background-color: rgba(255, 0, 170, 0);
     border: none;
-    font-size: 60px;
+    font-size: 50px;
     font-family: "Sniglet", system-ui;
     font-weight: 800;
     font-style: normal;
     color:#fdc3de;
     text-shadow:0 5px #e03183;
-    margin-top: 1%;
-    margin-left: 30%;
+    margin-top: .5%;
+    margin-left: 69%;
     width: 10%;
 }
 
@@ -121,7 +121,7 @@ img {
 #closeWelc:active {
     color: #fdaad1;
     text-shadow:0 2px #e03183;
-} */
+}
 .welcomeText {
     background-color: #fef1f8;
     position: fixed;
@@ -304,6 +304,11 @@ img {
         margin-left: 72%;
         margin-top: 7%;
         width: 16%;
+    }
+    #closeWelc {
+        margin-top: 5%;
+        margin-left: 86%;
+        font-size: 35px;
     }
 }
 
