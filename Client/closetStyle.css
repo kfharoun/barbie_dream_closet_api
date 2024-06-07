@@ -304,9 +304,7 @@ font-size: 2.9vh;
     height: 18vh;
     margin-top: 3vh;
 }
-.bubbleOutfit.Generation {
-    margin-top: 2vh;
-}
+
 /* dream date */
 
 .accessoryPic.Dream.Date.Barbie {
@@ -512,14 +510,27 @@ font-size: 2.9vh;
     }
     .wishlistOutfits {
         margin-left: 70vh;
+        height: 60vh;
     }
     .bubbleOutfitFalse {
         width: 10vh;
         height: 10vh;
+        margin:3vh;
     }
     .outfitPicFalse.Malibu {
         width: 8vh;
         margin-left: 1vh;
     }
-    
+    .productImage {
+        margin-left: -4%;
+    }
+    .barbieCloset {
+            margin-left: -2%;
+            width: 36vh;
+            height: 53vh; 
+    }
+    .accessoryWishText {
+        margin-left: 78vh;
+        font-size: 4vh;
+    }
 }

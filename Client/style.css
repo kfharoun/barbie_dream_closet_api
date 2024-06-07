@@ -106,6 +106,34 @@ img {
     display: none;
 }
 
+.welcomeText {
+    background-color: #fff8fcec;
+    position: fixed;
+    z-index: 6;
+    margin-left:62%;
+    color:#e03183;
+    padding: 1%;
+    border-radius: 2% 2%;
+    box-shadow: 0 5px #fabdda;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    word-wrap: normal;
+    margin-top: 2%;
+    transform: rotate(1deg);
+    width: 10%;
+    height: 10%;
+    text-align: center;
+}
+.h {
+    text-shadow: 0 2.44px #fabdda;
+    margin-bottom: 7%;
+}
+.p {
+    margin-top: 1%;
+}
+
 #closetLink {
     background-color: #e74b95;
     color: #fef1f8;
@@ -249,6 +277,12 @@ img {
     }
     #closeDesc {
         font-size: 30px;
+    }
+    .welcomeText{
+        padding: 1.5%;
+        font-size: small;
+        margin-left: 73%;
+        margin-top: 7%;
     }
 }
 
